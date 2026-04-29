@@ -387,17 +387,14 @@ h3 {
 }
 
 .logo-vivelibre {
-  height: 44px;
-  filter: brightness(0) invert(1);
+  height: 56px;
+  width: auto;
 }
 
 .logo-vivelibre--footer {
-  height: 24px;
-  opacity: 0.7;
-}
-
-.slide--light .logo-vivelibre {
-  filter: none;
+  height: 28px;
+  width: auto;
+  opacity: 0.85;
 }
 
 /* ============================================
@@ -623,6 +620,356 @@ h3 {
   color: var(--deep-blue);
   margin-top: 6px;
 }
+
+/* ============================================
+   BEHANCE REFERENCE CARD (slide 11)
+   ============================================ */
+.behance-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--mist);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 420px;
+  border: 1px solid var(--mist);
+}
+
+.behance-card__hero {
+  flex: 1;
+  background:
+    linear-gradient(135deg, rgba(29,47,73,0.55) 0%, rgba(56,94,157,0.35) 60%, rgba(55,207,168,0.25) 100%),
+    var(--fog-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 280px;
+}
+
+.behance-card__hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--aurora);
+  opacity: 0.12;
+  mix-blend-mode: overlay;
+}
+
+.behance-card__placeholder-text {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+
+.behance-card__body {
+  padding: 24px 28px 28px;
+  background: var(--paper);
+}
+
+.behance-card__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 8px;
+}
+
+.behance-card__title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--navy);
+}
+
+.behance-card__desc {
+  font-size: 13px;
+  color: var(--steel);
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.behance-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  background: var(--navy-deep);
+  color: var(--paper);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.behance-btn:hover {
+  background: var(--navy);
+  transform: translateY(-1px);
+}
+
+.behance-btn__arrow {
+  display: inline-block;
+  font-size: 14px;
+}
+
+/* ============================================
+   VIDEO MOSAIC (slide 12)
+   ============================================ */
+.video-mosaic {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 18px;
+  margin-top: 40px;
+  height: 580px;
+}
+
+.video-tile {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--navy-deep);
+}
+
+.video-tile--hero {
+  grid-row: span 2;
+}
+
+.video-tile iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-tile__caption {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 8px 14px;
+  background: rgba(12,19,34,0.78);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--paper);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ============================================
+   HITO MOODBOARD COMPACTO (slides 13-16)
+   ============================================ */
+.hito-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 40px;
+  margin-top: 32px;
+  align-items: stretch;
+}
+
+.hito-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hito-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+  margin-top: 20px;
+}
+
+.hito-meta__item {
+  border-top: 1.5px solid var(--mist);
+  padding-top: 8px;
+}
+
+.hito-meta__label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 4px;
+}
+
+.hito-meta__value {
+  font-size: 13px;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+.hito-visual {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 420px;
+  background: var(--fog-navy);
+}
+
+.hito-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--aurora);
+  opacity: 0.14;
+  mix-blend-mode: overlay;
+}
+
+.hito-visual--lanzamiento { background: linear-gradient(135deg, #1D2F49 0%, #5CAEFF 100%); }
+.hito-visual--navidad { background: linear-gradient(135deg, #2D1A0F 0%, #8B5A3C 60%, #C99979 100%); }
+.hito-visual--padre { background: linear-gradient(135deg, #2C3E2D 0%, #6B8E5A 60%, #C9B679 100%); }
+.hito-visual--madre { background: linear-gradient(135deg, #4A2E3D 0%, #A06A78 60%, #E8C5B4 100%); }
+
+.hito-visual__placeholder {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  z-index: 2;
+}
+
+.hito-visual__ref {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.hito-visual__ref iframe {
+  width: 88%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  border: 0;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+
+/* ============================================
+   TIMELINE 3 HITOS (slide 18)
+   ============================================ */
+.timeline-year {
+  position: relative;
+  margin-top: 60px;
+  padding: 60px 0 40px;
+}
+
+.timeline-year__line {
+  position: absolute;
+  top: 80px;
+  left: 4%;
+  right: 4%;
+  height: 4px;
+  background: var(--aurora);
+  border-radius: 2px;
+}
+
+.timeline-year__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.tl-hito {
+  position: relative;
+  padding-top: 56px;
+  text-align: left;
+}
+
+.tl-hito__dot {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 4px solid var(--navy);
+  z-index: 3;
+}
+
+.tl-hito--A .tl-hito__dot { border-color: var(--pulse-green); }
+.tl-hito--B .tl-hito__dot { border-color: var(--sky-blue); }
+.tl-hito--C .tl-hito__dot { border-color: var(--deep-blue); }
+
+.tl-hito__badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--navy);
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.tl-hito--A .tl-hito__badge { background: var(--pulse-green); color: var(--navy-deep); }
+.tl-hito--B .tl-hito__badge { background: var(--sky-blue); color: var(--navy-deep); }
+.tl-hito--C .tl-hito__badge { background: var(--deep-blue); }
+
+.tl-hito__when {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 6px;
+}
+
+.tl-hito__title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+
+.tl-hito__deliv {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.tl-hito__deliv li {
+  font-size: 13px;
+  color: var(--navy);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--mist);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.tl-hito__deliv li::before {
+  content: '→';
+  color: var(--steel);
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.tl-hito__deliv li:last-child { border-bottom: none; }
 
 /* Services list */
 .services-list {
@@ -1016,8 +1363,8 @@ h3 {
       </div>
       <div class="card">
         <span class="card__badge">03</span>
-        <h3>Tres fases</h3>
-        <p class="body" style="margin-top:14px;font-size:14px;">Web urgente, lanzamiento de septiembre y continuidad anual. El plan respeta el timeline real del producto y la urgencia de las piezas web.</p>
+        <h3>Tres hitos de rodaje</h3>
+        <p class="body" style="margin-top:14px;font-size:14px;">Junio: lanzamiento y web. Septiembre: continuidad y Navidad. Enero: Día del Padre y Día de la Madre. Tres rodajes para cubrir el año entero.</p>
       </div>
     </div>
   </div>
@@ -1130,7 +1477,7 @@ h3 {
 </section>
 
 <!-- ==========================================
-     SLIDE 11 — REFERENCIA DE CAMPAÑA (MASTER)
+     SLIDE 11 — REFERENCIA DE CAMPAÑA (BEHANCE)
      ========================================== -->
 <section class="slide slide--light" data-section="03 · REFERENCIA">
   <div class="blob" style="width:380px;height:180px;top:-40px;right:-50px;opacity:0.08;"></div>
@@ -1143,7 +1490,7 @@ h3 {
       <div class="moodboard__text">
         <h3 style="font-size:24px;">Dirección creativa</h3>
         <p class="moodboard__concept">
-          Tomas cinematográficas de ritmo lento. Primer plano del watch como detalle de joyería tech, luz natural cálida, gestos cotidianos como protagonista. La cámara está al servicio del usuario, no del producto. Cierre íntimo: una mirada, un gesto, el watch responde sin interrumpir.
+          Tomas cinematográficas de ritmo lento. Primer plano del watch como detalle de joyería tech, luz natural cálida, gestos cotidianos como protagonista. La cámara al servicio del usuario, no del producto. Cierre íntimo: una mirada, un gesto, el watch responde sin interrumpir.
         </p>
 
         <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
@@ -1166,17 +1513,19 @@ h3 {
         </div>
       </div>
 
-      <div>
-        <a class="video-ref" href="https://www.youtube.com/results?search_query=apple+watch+detection+911" target="_blank" rel="noopener" style="text-decoration:none;">
-          <div class="video-ref__poster video-ref__poster--alt1">
-            <div class="video-ref__play">▶</div>
-          </div>
-          <div class="video-ref__body">
-            <div class="video-ref__title">Apple Watch — "911"</div>
-            <div class="video-ref__desc">Spot institucional. Tono real, sereno, sin alarma. La tecnología como fondo, la persona como hero.</div>
-            <span class="video-ref__link">Ver en YouTube ↗</span>
-          </div>
-        </a>
+      <div class="behance-card">
+        <!-- REEMPLAZAR PLACEHOLDER POR <img src="behance-marineda.jpg"> CUANDO EL ASSET ESTÉ DISPONIBLE -->
+        <div class="behance-card__hero">
+          <span class="behance-card__placeholder-text">Placeholder · imagen Marineda City</span>
+        </div>
+        <div class="behance-card__body">
+          <div class="behance-card__label">Referencia visual</div>
+          <div class="behance-card__title">Marineda City</div>
+          <div class="behance-card__desc">Campaña visual y arquitectónica. Tono premium, humano, narrativa de marca con énfasis en lo cotidiano. La línea estética que queremos para ViveWatch.</div>
+          <a class="behance-btn" href="https://www.behance.net/gallery/189594175/Marineda-City" target="_blank" rel="noopener">
+            Ver proyecto en Behance <span class="behance-btn__arrow">↗</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -1189,51 +1538,52 @@ h3 {
 </section>
 
 <!-- ==========================================
-     SLIDE 12 — INSPIRACIÓN AUDIOVISUAL (4 refs)
+     SLIDE 12 — INSPIRACIÓN AUDIOVISUAL (mosaico 3 videos)
+     IDs YouTube son placeholders — REEMPLAZAR src de iframes
      ========================================== -->
 <section class="slide slide--light" data-section="03 · REFERENCIA">
   <div class="blob" style="width:380px;height:180px;bottom:-40px;left:-40px;opacity:0.1;"></div>
 
   <div class="slide__content slide__content--top">
     <p class="eyebrow">INSPIRACIÓN AUDIOVISUAL</p>
-    <h1>Cuatro referencias que marcan el norte.</h1>
+    <h1>Tres referencias que marcan el norte.</h1>
 
-    <div class="grid-4" style="margin-top:48px;gap:20px;">
-      <a class="video-ref" href="https://www.youtube.com/results?search_query=apple+watch+some+things+matter" target="_blank" rel="noopener" style="text-decoration:none;">
-        <div class="video-ref__poster video-ref__poster--alt1"><div class="video-ref__play">▶</div></div>
-        <div class="video-ref__body">
-          <div class="video-ref__title">Apple Watch</div>
-          <div class="video-ref__desc">Lenguaje cinematográfico. Lo que tomamos: primer plano del producto como detalle, no como hero.</div>
-          <span class="video-ref__link">YouTube ↗</span>
-        </div>
-      </a>
-      <a class="video-ref" href="https://www.youtube.com/results?search_query=nike+find+your+greatness" target="_blank" rel="noopener" style="text-decoration:none;">
-        <div class="video-ref__poster video-ref__poster--alt2"><div class="video-ref__play">▶</div></div>
-        <div class="video-ref__body">
-          <div class="video-ref__title">Nike — Find Your Greatness</div>
-          <div class="video-ref__desc">Humanidad sin épica. Lo que tomamos: el protagonista común como héroe sin condescendencia.</div>
-          <span class="video-ref__link">YouTube ↗</span>
-        </div>
-      </a>
-      <a class="video-ref" href="https://www.youtube.com/results?search_query=volvo+for+life" target="_blank" rel="noopener" style="text-decoration:none;">
-        <div class="video-ref__poster video-ref__poster--alt3"><div class="video-ref__play">▶</div></div>
-        <div class="video-ref__body">
-          <div class="video-ref__title">Volvo — For Life</div>
-          <div class="video-ref__desc">Silencio premium. Lo que tomamos: la seguridad comunicada desde la calma, no desde el peligro.</div>
-          <span class="video-ref__link">YouTube ↗</span>
-        </div>
-      </a>
-      <a class="video-ref" href="https://www.youtube.com/results?search_query=apple+holiday+frankie+spot" target="_blank" rel="noopener" style="text-decoration:none;">
-        <div class="video-ref__poster video-ref__poster--alt4"><div class="video-ref__play">▶</div></div>
-        <div class="video-ref__body">
-          <div class="video-ref__title">Apple — Frankie's Holiday</div>
-          <div class="video-ref__desc">Intimidad familiar. Lo que tomamos: el dispositivo como puente afectivo, no como objeto.</div>
-          <span class="video-ref__link">YouTube ↗</span>
-        </div>
-      </a>
+    <div class="video-mosaic">
+      <!-- TILE HERO (grande, izquierda) — referencia principal -->
+      <div class="video-tile video-tile--hero">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/M7FIvfx5J10?rel=0&modestbranding=1"
+          title="Volvo — Epic Split"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="video-tile__caption">Volvo — Premium · silencio · seguridad sin alarma</span>
+      </div>
+
+      <!-- TILE TOP-RIGHT — referencia humana -->
+      <div class="video-tile">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/IZ-3JJQpCQI?rel=0&modestbranding=1"
+          title="Apple Holiday — Misunderstood"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="video-tile__caption">Apple Holiday — Intimidad familiar</span>
+      </div>
+
+      <!-- TILE BOTTOM-RIGHT — referencia cinematográfica -->
+      <div class="video-tile">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/lxmq-e2sJsI?rel=0&modestbranding=1"
+          title="Apple — Welcome Home"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+        <span class="video-tile__caption">Apple — Lenguaje cinematográfico</span>
+      </div>
     </div>
 
-    <p class="subtitle" style="margin-top:32px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;">Cards con búsqueda de YouTube · embeds finales se cargan tras curaduría conjunta</p>
+    <p class="subtitle" style="margin-top:24px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);">Reproducir directamente desde la propuesta · embeds finales sustituibles editando los iframes</p>
   </div>
 
   <div class="slide__footer">
@@ -1244,7 +1594,7 @@ h3 {
 </section>
 
 <!-- ==========================================
-     SLIDE 13 — HITO 01 · LANZAMIENTO
+     SLIDE 13 — HITO 01 · LANZAMIENTO (foco visual)
      ========================================== -->
 <section class="slide slide--light" data-section="04 · REFERENCIAS POR HITO">
   <div class="blob" style="width:380px;height:180px;top:-40px;right:-50px;opacity:0.08;"></div>
@@ -1253,42 +1603,35 @@ h3 {
     <p class="eyebrow">HITO 01 — LANZAMIENTO · SEPTIEMBRE 2026</p>
     <h1>El primer día con <span class="gradient-text">ViveWatch</span>.</h1>
 
-    <div class="moodboard" style="margin-top:40px;">
-      <div class="moodboard__text">
-        <h3 style="font-size:22px;">Concepto del spot</h3>
+    <div class="hito-layout">
+      <div class="hito-text">
+        <h3 style="font-size:22px;line-height:1.2;">Enfoque visual</h3>
         <p class="moodboard__concept">
-          Una protagonista vive una jornada normal en su casa, en la calle, con un nieto. El watch acompaña sin interrumpir. La narrativa va construyendo confianza. Cierre: un gesto íntimo (mira la hora, el watch responde con un detalle visual sutil) y la línea final aparece en pantalla — <em>"Sigue siendo tú."</em>
+          Tomas íntimas, luz natural cálida, la jornada cotidiana como hero. El watch entra y sale del cuadro como un detalle más, nunca anunciado. Cierre con la línea <em>"Sigue siendo tú."</em>
         </p>
 
-        <div style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Locación</div>
-            <div style="font-size:13px;margin-top:4px;">Interior cálido + exterior urbano luminoso</div>
+        <div class="hito-meta">
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Locación</div>
+            <div class="hito-meta__value">Interior cálido + exterior urbano</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Casting</div>
-            <div style="font-size:13px;margin-top:4px;">1 protagonista 60—70 + 1 figurante (nieto/hija)</div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Paleta</div>
+            <div class="hito-meta__value">Tierras + azul ViveLibre como acento</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Duración</div>
-            <div style="font-size:13px;margin-top:4px;">30—45" master + cortes 15" para reels</div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Lente</div>
+            <div class="hito-meta__value">Primes 35/50/85mm · cámara estable</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">B-roll</div>
-            <div style="font-size:13px;margin-top:4px;">Detalles del watch + manos + ambientes (para iteración IA)</div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Hero pieza</div>
+            <div class="hito-meta__value">Spot 30—45" + cortes 15"</div>
           </div>
         </div>
       </div>
 
-      <div>
-        <a class="video-ref" href="https://www.youtube.com/results?search_query=apple+watch+series+9+launch" target="_blank" rel="noopener" style="text-decoration:none;">
-          <div class="video-ref__poster video-ref__poster--alt1"><div class="video-ref__play">▶</div></div>
-          <div class="video-ref__body">
-            <div class="video-ref__title">Apple Watch Series — Launch</div>
-            <div class="video-ref__desc">Tomas íntimas, ritmo respirado, producto como detalle de moda y no como hero.</div>
-            <span class="video-ref__link">Ver en YouTube ↗</span>
-          </div>
-        </a>
+      <div class="hito-visual hito-visual--lanzamiento">
+        <span class="hito-visual__placeholder">Placeholder · imagen referencia</span>
       </div>
     </div>
   </div>
@@ -1301,7 +1644,7 @@ h3 {
 </section>
 
 <!-- ==========================================
-     SLIDE 14 — HITO 02 · NAVIDAD
+     SLIDE 14 — HITO 02 · NAVIDAD (foco visual)
      ========================================== -->
 <section class="slide slide--light" data-section="04 · REFERENCIAS POR HITO">
   <div class="blob" style="width:380px;height:180px;bottom:-40px;left:-40px;opacity:0.08;"></div>
@@ -1310,42 +1653,35 @@ h3 {
     <p class="eyebrow">HITO 02 — NAVIDAD · NOV 2026 — ENE 2027</p>
     <h1>La presencia que perdura.</h1>
 
-    <div class="moodboard" style="margin-top:40px;">
-      <div class="moodboard__text">
-        <h3 style="font-size:22px;">Concepto del spot</h3>
+    <div class="hito-layout">
+      <div class="hito-text">
+        <h3 style="font-size:22px;line-height:1.2;">Enfoque visual</h3>
         <p class="moodboard__concept">
-          La mesa familiar de Nochebuena. El protagonista es el padre o la madre. ViveWatch aparece como un regalo silencioso de los hijos — no se entrega como un dispositivo médico, sino como una joya útil. El cierre es emocional sin alarma: las manos uniéndose en la mesa, el watch en una de ellas. <em>"Sigue siendo tú. Esta Navidad y todas las que vienen."</em>
+          Atmósfera de mesa familiar nocturna. Luz cálida, sombras suaves, primer plano de manos. ViveWatch aparece como una joya útil entre los gestos compartidos — sin escenificación, sin alarma.
         </p>
 
-        <div style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Locación</div>
-            <div style="font-size:13px;margin-top:4px;">Interior familiar nocturno · velas, fuego, mesa</div>
+        <div class="hito-meta">
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Locación</div>
+            <div class="hito-meta__value">Interior nocturno · velas, fuego, mesa</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Tono cromático</div>
-            <div style="font-size:13px;margin-top:4px;">Cálido, ámbar, con verde sutil del aurora</div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Paleta</div>
+            <div class="hito-meta__value">Cálido, ámbar, terroso</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Producción</div>
-            <div style="font-size:13px;margin-top:4px;">Iteración IA sobre rodaje base + insert footage</div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Producción</div>
+            <div class="hito-meta__value">Iteración IA sobre rodaje base + insert</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Pieza hero</div>
-            <div style="font-size:13px;margin-top:4px;">Reel 30" + adaptaciones · cuña radio</div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Hero pieza</div>
+            <div class="hito-meta__value">Spot 30" + cuña radio + adaptaciones</div>
           </div>
         </div>
       </div>
 
-      <div>
-        <a class="video-ref" href="https://www.youtube.com/results?search_query=apple+holiday+the+surprise" target="_blank" rel="noopener" style="text-decoration:none;">
-          <div class="video-ref__poster video-ref__poster--alt2"><div class="video-ref__play">▶</div></div>
-          <div class="video-ref__body">
-            <div class="video-ref__title">Apple Holiday — The Surprise</div>
-            <div class="video-ref__desc">Familia, tecnología invisible, emoción sin condescendencia. El producto al servicio del vínculo.</div>
-            <span class="video-ref__link">Ver en YouTube ↗</span>
-          </div>
-        </a>
+      <div class="hito-visual hito-visual--navidad">
+        <span class="hito-visual__placeholder">Placeholder · imagen referencia</span>
       </div>
     </div>
   </div>
@@ -1358,7 +1694,7 @@ h3 {
 </section>
 
 <!-- ==========================================
-     SLIDE 15 — HITO 03 · DÍA DEL PADRE
+     SLIDE 15 — HITO 03 · DÍA DEL PADRE (foco visual)
      ========================================== -->
 <section class="slide slide--light" data-section="04 · REFERENCIAS POR HITO">
   <div class="blob" style="width:380px;height:180px;top:-40px;right:-50px;opacity:0.08;"></div>
@@ -1367,42 +1703,35 @@ h3 {
     <p class="eyebrow">HITO 03 — DÍA DEL PADRE · MARZO 2027</p>
     <h1>El que sigue mostrándote el camino.</h1>
 
-    <div class="moodboard" style="margin-top:40px;">
-      <div class="moodboard__text">
-        <h3 style="font-size:22px;">Concepto del spot</h3>
+    <div class="hito-layout">
+      <div class="hito-text">
+        <h3 style="font-size:22px;line-height:1.2;">Enfoque visual</h3>
         <p class="moodboard__concept">
-          Padre activo: una caminata por el campo, el taller, el jardín, una bicicleta. El watch como extensión de su autonomía, no como dispositivo de vigilancia. El hijo aparece al final, no como cuidador, sino como compañero. <em>"Sigue siendo tú. El que siempre fue."</em>
+          Exterior, luz dorada, movimiento real. La actividad del día (caminata, taller, jardín) cuenta la historia sin narración. El watch es extensión de autonomía, no dispositivo de vigilancia.
         </p>
 
-        <div style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Locación</div>
-            <div style="font-size:13px;margin-top:4px;">Exterior · luz dorada · campo o pueblo</div>
+        <div class="hito-meta">
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Locación</div>
+            <div class="hito-meta__value">Exterior · campo, taller, pueblo</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Acción</div>
-            <div style="font-size:13px;margin-top:4px;">Un día activo · gestos manuales · movimiento real</div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Paleta</div>
+            <div class="hito-meta__value">Dorada · verdes naturales · piel real</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Narración</div>
-            <div style="font-size:13px;margin-top:4px;">Mínima. La acción cuenta la historia.</div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Producción</div>
+            <div class="hito-meta__value">Iteración IA + b-roll campaña</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Producción</div>
-            <div style="font-size:13px;margin-top:4px;">Iteración IA + b-roll Jornada 2 (julio 2026)</div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Hero pieza</div>
+            <div class="hito-meta__value">Spot 30" + 3 stories + carrusel</div>
           </div>
         </div>
       </div>
 
-      <div>
-        <a class="video-ref" href="https://www.youtube.com/results?search_query=volvo+made+by+sweden" target="_blank" rel="noopener" style="text-decoration:none;">
-          <div class="video-ref__poster video-ref__poster--alt3"><div class="video-ref__play">▶</div></div>
-          <div class="video-ref__body">
-            <div class="video-ref__title">Volvo — Made by Sweden</div>
-            <div class="video-ref__desc">Naturaleza, autonomía, hombre maduro como héroe sereno. Sin épica innecesaria.</div>
-            <span class="video-ref__link">Ver en YouTube ↗</span>
-          </div>
-        </a>
+      <div class="hito-visual hito-visual--padre">
+        <span class="hito-visual__placeholder">Placeholder · imagen referencia</span>
       </div>
     </div>
   </div>
@@ -1415,7 +1744,7 @@ h3 {
 </section>
 
 <!-- ==========================================
-     SLIDE 16 — HITO 04 · DÍA DE LA MADRE
+     SLIDE 16 — HITO 04 · DÍA DE LA MADRE (foco visual)
      ========================================== -->
 <section class="slide slide--light" data-section="04 · REFERENCIAS POR HITO">
   <div class="blob" style="width:380px;height:180px;bottom:-40px;left:-40px;opacity:0.08;"></div>
@@ -1424,42 +1753,35 @@ h3 {
     <p class="eyebrow">HITO 04 — DÍA DE LA MADRE · ABR—MAY 2027</p>
     <h1>Siempre ella, siempre presente.</h1>
 
-    <div class="moodboard" style="margin-top:40px;">
-      <div class="moodboard__text">
-        <h3 style="font-size:22px;">Concepto del spot</h3>
+    <div class="hito-layout">
+      <div class="hito-text">
+        <h3 style="font-size:22px;line-height:1.2;">Enfoque visual</h3>
         <p class="moodboard__concept">
-          Madre en su vida: la cocina, una lectura, un paseo con el nieto, una conversación con una amiga. La identidad intacta. ViveWatch como joya útil — el plano cerrado en la muñeca cierra el spot. <em>"Sigue siendo tú. La que siempre fue."</em>
+          Su vida cotidiana intacta. Cocina, lectura, paseo, conversación. ViveWatch en muñeca como joya — plano cerrado al final, sin gesto excepcional. La identidad sigue siendo ella.
         </p>
 
-        <div style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Locación</div>
-            <div style="font-size:13px;margin-top:4px;">Interior cálido + plaza/parque luminoso</div>
+        <div class="hito-meta">
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Locación</div>
+            <div class="hito-meta__value">Interior cálido + plaza luminosa</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Tono cromático</div>
-            <div style="font-size:13px;margin-top:4px;">Cálido, terroso, con primer plano del watch</div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Paleta</div>
+            <div class="hito-meta__value">Cálida, rosada, terrosa</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Pieza hero</div>
-            <div style="font-size:13px;margin-top:4px;">Reel 30" + 3 stories + 1 carrusel</div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Producción</div>
+            <div class="hito-meta__value">Iteración IA + b-roll campaña</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);">Producción</div>
-            <div style="font-size:13px;margin-top:4px;">Iteración IA + b-roll Jornada 2 (julio 2026)</div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Hero pieza</div>
+            <div class="hito-meta__value">Spot 30" + 3 stories + carrusel</div>
           </div>
         </div>
       </div>
 
-      <div>
-        <a class="video-ref" href="https://www.youtube.com/results?search_query=pandora+mother+day+spot" target="_blank" rel="noopener" style="text-decoration:none;">
-          <div class="video-ref__poster video-ref__poster--alt4"><div class="video-ref__play">▶</div></div>
-          <div class="video-ref__body">
-            <div class="video-ref__title">Pandora — Mother's Day</div>
-            <div class="video-ref__desc">Joyería como vínculo emocional. Lo que tomamos: el dispositivo como objeto íntimo, no funcional.</div>
-            <span class="video-ref__link">Ver en YouTube ↗</span>
-          </div>
-        </a>
+      <div class="hito-visual hito-visual--madre">
+        <span class="hito-visual__placeholder">Placeholder · imagen referencia</span>
       </div>
     </div>
   </div>
@@ -1497,56 +1819,67 @@ h3 {
 </section>
 
 <!-- ==========================================
-     SLIDE 18 — TRES FASES
+     SLIDE 18 — TIMELINE 3 HITOS
      ========================================== -->
 <section class="slide slide--light" data-section="05 · PLAN">
   <div class="blob" style="width:380px;height:180px;bottom:-40px;right:-50px;opacity:0.1;"></div>
 
   <div class="slide__content slide__content--top">
-    <p class="eyebrow">PLAN · TRES FASES</p>
-    <h1>Una producción, un año de campaña.</h1>
+    <p class="eyebrow">PLAN DE CAMPAÑA · TRES HITOS DE PRODUCCIÓN</p>
+    <h1>Tres rodajes, un año entero de campaña.</h1>
 
-    <div class="phases">
-      <div class="phase">
-        <div class="phase__num">FASE 01 · WEB URGENTE</div>
-        <div class="phase__title">Cimientos digitales</div>
-        <div class="phase__date">Mayo — Julio 2026</div>
-        <ul class="phase__list">
-          <li>1 video hero web (10—20")</li>
-          <li>3 testimoniales (90" cada uno)</li>
-          <li>2 fotos editoriales (Salud + Seguridad)</li>
-          <li>Casting + dirección + post</li>
-        </ul>
-      </div>
-      <div class="phase">
-        <div class="phase__num">FASE 02 · LANZAMIENTO</div>
-        <div class="phase__title">Campaña hero</div>
-        <div class="phase__date">Rodaje julio · on-air septiembre 2026</div>
-        <ul class="phase__list">
-          <li>1 spot master 30—45"</li>
-          <li>3 reels 15" + 3 posts + 3 stories</li>
-          <li>Biblioteca imágenes campaña</li>
-          <li>3 banners GIF + gráfica estática</li>
-          <li>1 cuña de radio</li>
-        </ul>
-      </div>
-      <div class="phase">
-        <div class="phase__num">FASE 03 · CONTINUIDAD</div>
-        <div class="phase__title">Iteración con IA</div>
-        <div class="phase__date">Octubre 2026 — Mayo 2027</div>
-        <ul class="phase__list">
-          <li>4× Continuidad (15 piezas c/u)</li>
-          <li>Hito Navidad (15 piezas)</li>
-          <li>Hito Día del Padre (15 piezas)</li>
-          <li>Hito Día de la Madre (15 piezas)</li>
-          <li>Iteración IA sobre rodaje julio · sin re-filmación</li>
-        </ul>
+    <div class="timeline-year">
+      <div class="timeline-year__line"></div>
+      <div class="timeline-year__grid">
+
+        <div class="tl-hito tl-hito--A">
+          <span class="tl-hito__dot"></span>
+          <span class="tl-hito__badge">Hito A</span>
+          <div class="tl-hito__when">Inicios de Junio 2026</div>
+          <div class="tl-hito__title">Filmación de lanzamiento + web</div>
+          <ul class="tl-hito__deliv">
+            <li>Spot Lanzamiento (30—45")</li>
+            <li>3 testimoniales (90" c/u)</li>
+            <li>Video Hero web (10—20")</li>
+            <li>Imágenes editoriales de campaña</li>
+            <li>B-roll para iteración IA</li>
+          </ul>
+        </div>
+
+        <div class="tl-hito tl-hito--B">
+          <span class="tl-hito__dot"></span>
+          <span class="tl-hito__badge">Hito B</span>
+          <div class="tl-hito__when">Septiembre 2026</div>
+          <div class="tl-hito__title">Continuidad + Navidad</div>
+          <ul class="tl-hito__deliv">
+            <li>Spot Continuidad</li>
+            <li>Spot Navidad</li>
+            <li>Adaptaciones piezas digitales</li>
+            <li>Cuña radio Navidad</li>
+            <li>Iteración IA sobre material Hito A</li>
+          </ul>
+        </div>
+
+        <div class="tl-hito tl-hito--C">
+          <span class="tl-hito__dot"></span>
+          <span class="tl-hito__badge">Hito C</span>
+          <div class="tl-hito__when">Enero 2027</div>
+          <div class="tl-hito__title">Día del Padre + Día de la Madre</div>
+          <ul class="tl-hito__deliv">
+            <li>Spot Día del Padre</li>
+            <li>Spot Día de la Madre</li>
+            <li>Adaptaciones piezas digitales</li>
+            <li>Cierre del año de campaña</li>
+            <li>Iteración IA sobre Hitos A y B</li>
+          </ul>
+        </div>
+
       </div>
     </div>
 
-    <div style="margin-top:36px;padding:22px 28px;background:var(--navy-deep);color:var(--paper);border-radius:14px;">
-      <p style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--fog);margin-bottom:6px;">Insight clave</p>
-      <p class="body" style="color:var(--paper);font-size:15px;max-width:none;">Filmando una vez en julio + iterando con IA cubrimos los 7 hitos del año sin volver a producción. El watch protagonista, las locaciones reales y los actores quedan capturados — la IA solo modula contexto, paleta y ambiente para cada hito.</p>
+    <div style="margin-top:30px;padding:22px 28px;background:var(--navy-deep);color:var(--paper);border-radius:14px;">
+      <p style="font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--fog);margin-bottom:6px;">Insight clave</p>
+      <p class="body" style="color:var(--paper);font-size:14px;max-width:none;">Tres rodajes distribuidos en el año + iteración con IA generativa nos permiten cubrir los 7 hitos del plan de medios manteniendo coherencia visual y eficiencia productiva. Cada hito captura material que alimenta la iteración IA del siguiente.</p>
     </div>
   </div>
 
@@ -1558,52 +1891,84 @@ h3 {
 </section>
 
 <!-- ==========================================
-     SLIDE 19 — PLAN DE RODAJES
+     SLIDE 19 — PLAN DE ENTREGABLES (por hito)
      ========================================== -->
 <section class="slide slide--light" data-section="05 · PLAN">
   <div class="blob" style="width:380px;height:180px;bottom:-40px;left:-40px;opacity:0.08;"></div>
 
   <div class="slide__content slide__content--top">
-    <p class="eyebrow">PLAN DE RODAJES</p>
-    <h1>Dos jornadas, un año cubierto.</h1>
+    <p class="eyebrow">PLAN DE ENTREGABLES POR HITO</p>
+    <h1>Lo que se rueda y lo que se genera por IA en cada hito.</h1>
 
-    <div class="table-wrap" style="margin-top:40px;">
+    <div class="table-wrap" style="margin-top:32px;">
       <table>
         <thead>
           <tr>
-            <th>Jornada</th>
-            <th>Fecha</th>
-            <th>Piezas que se generan</th>
-            <th>Casting</th>
-            <th>Locación</th>
-            <th>Iteración IA posterior</th>
+            <th style="width:14%;">Hito</th>
+            <th style="width:13%;">Cuándo</th>
+            <th style="width:36%;">Producción rodaje</th>
+            <th style="width:37%;">Iteración IA + adaptaciones</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="td-bold">Jornada 1<br><span style="color:var(--steel);font-weight:400;">Web urgente</span></td>
-            <td>Mayo 2026</td>
-            <td>3 testimoniales + 2 fotos editoriales + insert b-roll watch</td>
-            <td>3 actores (1 protagonista + 2 secundarios) + 1 fotógrafo editorial</td>
-            <td>Interior controlado · 1 día</td>
-            <td>Edits cortos para web + banners adaptados</td>
+            <td class="td-bold">A · Lanzamiento + Web<br><span style="color:var(--steel);font-weight:400;font-size:11px;">2 días de rodaje</span></td>
+            <td>Inicios de Junio 2026</td>
+            <td>
+              · 1 spot Lanzamiento (30—45")<br>
+              · 3 testimoniales (90" c/u)<br>
+              · 1 video hero web (10—20")<br>
+              · 2 fotos editoriales (Salud + Seguridad)<br>
+              · B-roll watch + manos + ambientes
+            </td>
+            <td>
+              · 3 reels 15" + 3 posts + 3 stories<br>
+              · Adaptaciones verticales + horizontales<br>
+              · Biblioteca imágenes campaña<br>
+              · Gráfica estática (.psd + jpg/png)<br>
+              · 3 banners GIF (300×250 / 300×600 / 320×100)<br>
+              · Campaña Verano (15 piezas) por iteración IA
+            </td>
           </tr>
           <tr>
-            <td class="td-bold">Jornada 2<br><span style="color:var(--steel);font-weight:400;">Campaña hero</span></td>
-            <td>Julio 2026</td>
-            <td>Spot master 30—45" + cortes 15" + b-roll para 7 hitos del año</td>
-            <td>4—6 actores · franja 55—75</td>
-            <td>2 locaciones (interior cálido + exterior urbano) · 2 días</td>
-            <td>~80 piezas iteradas con IA para Lanzamiento + Continuidad + Navidad + Padre + Madre</td>
+            <td class="td-bold">B · Continuidad + Navidad<br><span style="color:var(--steel);font-weight:400;font-size:11px;">1—2 días de rodaje</span></td>
+            <td>Septiembre 2026</td>
+            <td>
+              · 1 spot Continuidad<br>
+              · 1 spot Navidad<br>
+              · B-roll temáticos invierno + familia
+            </td>
+            <td>
+              · 4× Continuidad (15 piezas c/u = 60)<br>
+              · Navidad: reel + posts + stories + adaptaciones (15)<br>
+              · 1 cuña radio Navidad<br>
+              · Banners GIF estacionales<br>
+              · Materiales OFF: emailing + díptico + roll up
+            </td>
+          </tr>
+          <tr>
+            <td class="td-bold">C · Padre + Madre<br><span style="color:var(--steel);font-weight:400;font-size:11px;">1—2 días de rodaje</span></td>
+            <td>Enero 2027</td>
+            <td>
+              · 1 spot Día del Padre<br>
+              · 1 spot Día de la Madre<br>
+              · B-roll exterior + intimidad familiar
+            </td>
+            <td>
+              · Día del Padre: 15 piezas (reel + posts + stories + adapt + banners)<br>
+              · Día de la Madre: 15 piezas (reel + posts + stories + adapt + banners)<br>
+              · Cierre del año + reporte de campaña
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <div class="grid-3" style="margin-top:36px;gap:24px;">
-      <div class="stat"><div class="stat__value">2</div><div class="stat__label">Jornadas de rodaje</div></div>
-      <div class="stat"><div class="stat__value">7</div><div class="stat__label">Hitos cubiertos en el año</div></div>
-      <div class="stat"><div class="stat__value">~110</div><div class="stat__label">Piezas finales (rodaje + IA)</div></div>
+    <div class="grid-4" style="margin-top:32px;gap:20px;">
+      <div class="stat"><div class="stat__value">3</div><div class="stat__label">Hitos de rodaje</div></div>
+      <div class="stat"><div class="stat__value">7</div><div class="stat__label">Campañas del año</div></div>
+      <div class="stat"><div class="stat__value">110+</div><div class="stat__label">Piezas totales</div></div>
+      <div class="stat"><div class="stat__value">12</div><div class="stat__label">Meses de campaña</div></div>
     </div>
   </div>
 
@@ -1675,35 +2040,35 @@ h3 {
           <div class="budget-block__pct">15%</div>
           <div class="budget-block__body">
             <div class="budget-block__title">Estrategia + Concepto</div>
-            <div class="budget-block__desc">Concepto paraguas, eje narrativo, tono, dirección creativa de campaña.</div>
+            <div class="budget-block__desc">Concepto paraguas, eje narrativo, tono, dirección creativa de la campaña.</div>
             <div class="budget-block__when">Al firmar · mayo 2026</div>
+          </div>
+        </div>
+
+        <div class="budget-block">
+          <div class="budget-block__pct">30%</div>
+          <div class="budget-block__body">
+            <div class="budget-block__title">Hito A · Lanzamiento + Web</div>
+            <div class="budget-block__desc">Rodaje Lanzamiento + testimoniales + video hero + fotos editoriales + iteración IA inicial.</div>
+            <div class="budget-block__when">Al rodar · junio 2026</div>
           </div>
         </div>
 
         <div class="budget-block">
           <div class="budget-block__pct">25%</div>
           <div class="budget-block__body">
-            <div class="budget-block__title">Producción Fase 1 — Web</div>
-            <div class="budget-block__desc">Jornada 1 de rodaje · video hero, 3 testimoniales y 2 fotos editoriales para web.</div>
-            <div class="budget-block__when">Al rodar · mayo 2026</div>
+            <div class="budget-block__title">Hito B · Continuidad + Navidad</div>
+            <div class="budget-block__desc">Rodaje continuidad + Navidad + 4× Continuidad por iteración IA + cuña radio.</div>
+            <div class="budget-block__when">Al rodar · septiembre 2026</div>
           </div>
         </div>
 
         <div class="budget-block">
-          <div class="budget-block__pct">35%</div>
+          <div class="budget-block__pct">25%</div>
           <div class="budget-block__body">
-            <div class="budget-block__title">Producción Fase 2 — Lanzamiento</div>
-            <div class="budget-block__desc">Jornada 2 de rodaje · spot master, reels, posts, stories, banners, cuña.</div>
-            <div class="budget-block__when">Al rodar · julio 2026</div>
-          </div>
-        </div>
-
-        <div class="budget-block">
-          <div class="budget-block__pct">20%</div>
-          <div class="budget-block__body">
-            <div class="budget-block__title">Iteración IA + Continuidad</div>
-            <div class="budget-block__desc">Generación de assets para 4× Continuidad, Navidad, Padre y Madre.</div>
-            <div class="budget-block__when">Entrega progresiva · oct 2026 — may 2027</div>
+            <div class="budget-block__title">Hito C · Día del Padre + Madre</div>
+            <div class="budget-block__desc">Rodaje Día del Padre y Día de la Madre + adaptaciones por iteración IA.</div>
+            <div class="budget-block__when">Al rodar · enero 2027</div>
           </div>
         </div>
 
