@@ -31,10 +31,10 @@
   --font: 'Montserrat', sans-serif;
 
   --pad-x: 120px;
-  --pad-top: 100px;
-  --pad-bottom: 80px;
-  --gap-title: 52px;
-  --gap-item: 28px;
+  --pad-top: 72px;
+  --pad-bottom: 56px;
+  --gap-title: 40px;
+  --gap-item: 24px;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -105,16 +105,17 @@ html, body {
 
 .slide__content--top {
   justify-content: flex-start;
-  padding-top: 80px;
+  padding-top: 60px;
 }
 
 .slide__footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 var(--pad-x) 32px;
+  padding: 0 var(--pad-x) 22px;
   position: relative;
   z-index: 2;
+  flex-shrink: 0;
 }
 
 .slide__footer__center {
@@ -244,7 +245,7 @@ h3 {
 .card {
   background: var(--mist);
   border-radius: 16px;
-  padding: 36px;
+  padding: 28px;
   position: relative;
   overflow: hidden;
 }
@@ -578,8 +579,8 @@ h3 {
 .budget-block {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
-  padding: 20px 0;
+  gap: 18px;
+  padding: 14px 0;
   border-bottom: 1px solid var(--mist);
 }
 
@@ -723,15 +724,15 @@ h3 {
 }
 
 /* ============================================
-   VIDEO MOSAIC (slide 12)
+   VIDEO MOSAIC (slide 14) — lite-youtube pattern
    ============================================ */
 .video-mosaic {
   display: grid;
   grid-template-columns: 1.45fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 18px;
-  margin-top: 40px;
-  height: 580px;
+  gap: 16px;
+  margin-top: 28px;
+  height: clamp(360px, 56vh, 480px);
 }
 
 .video-tile {
@@ -739,35 +740,80 @@ h3 {
   border-radius: 14px;
   overflow: hidden;
   background: var(--navy-deep);
+  cursor: pointer;
 }
 
 .video-tile--hero {
   grid-row: span 2;
 }
 
-.video-tile iframe {
+.video-tile iframe,
+.video-tile img.video-tile__thumb {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   border: 0;
+  object-fit: cover;
+  display: block;
+}
+
+.video-tile__thumb {
+  filter: brightness(0.85);
+  transition: filter 0.3s ease;
+}
+
+.video-tile:hover .video-tile__thumb {
+  filter: brightness(1);
+}
+
+.video-tile__playbtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+.video-tile:hover .video-tile__playbtn {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.video-tile__playbtn::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 18px solid var(--navy-deep);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  margin-left: 4px;
 }
 
 .video-tile__caption {
   position: absolute;
-  left: 16px;
-  bottom: 16px;
-  padding: 8px 14px;
-  background: rgba(12,19,34,0.78);
+  left: 14px;
+  bottom: 14px;
+  padding: 7px 12px;
+  background: rgba(12,19,34,0.82);
   backdrop-filter: blur(8px);
   border-radius: 8px;
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--paper);
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
+  max-width: calc(100% - 28px);
 }
 
 /* ============================================
@@ -818,7 +864,7 @@ h3 {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  min-height: 420px;
+  min-height: 360px;
   background: var(--fog-navy);
 }
 
@@ -1686,40 +1732,29 @@ h3 {
 
     <div class="video-mosaic">
       <!-- TILE HERO (grande, izquierda) — referencia principal -->
-      <div class="video-tile video-tile--hero">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/M7FIvfx5J10?rel=0&modestbranding=1"
-          title="Volvo — Epic Split"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy"></iframe>
+      <!-- Para reemplazar el video: cambiar data-yt-id y los datos visibles -->
+      <div class="video-tile video-tile--hero" data-yt-id="M7FIvfx5J10" data-yt-title="Volvo — Epic Split">
+        <img class="video-tile__thumb" src="https://i.ytimg.com/vi/M7FIvfx5J10/maxresdefault.jpg" alt="Volvo — Epic Split" loading="lazy">
+        <div class="video-tile__playbtn"></div>
         <span class="video-tile__caption">Volvo — Premium · silencio · seguridad sin alarma</span>
       </div>
 
       <!-- TILE TOP-RIGHT — referencia humana -->
-      <div class="video-tile">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/IZ-3JJQpCQI?rel=0&modestbranding=1"
-          title="Apple Holiday — Misunderstood"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy"></iframe>
+      <div class="video-tile" data-yt-id="IZ-3JJQpCQI" data-yt-title="Apple Holiday — Misunderstood">
+        <img class="video-tile__thumb" src="https://i.ytimg.com/vi/IZ-3JJQpCQI/maxresdefault.jpg" alt="Apple Holiday — Misunderstood" loading="lazy">
+        <div class="video-tile__playbtn"></div>
         <span class="video-tile__caption">Apple Holiday — Intimidad familiar</span>
       </div>
 
       <!-- TILE BOTTOM-RIGHT — referencia cinematográfica -->
-      <div class="video-tile">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/lxmq-e2sJsI?rel=0&modestbranding=1"
-          title="Apple — Welcome Home"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy"></iframe>
+      <div class="video-tile" data-yt-id="lxmq-e2sJsI" data-yt-title="Apple — Welcome Home">
+        <img class="video-tile__thumb" src="https://i.ytimg.com/vi/lxmq-e2sJsI/maxresdefault.jpg" alt="Apple — Welcome Home" loading="lazy">
+        <div class="video-tile__playbtn"></div>
         <span class="video-tile__caption">Apple — Lenguaje cinematográfico</span>
       </div>
     </div>
 
-    <p class="subtitle" style="margin-top:24px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);">Reproducir directamente desde la propuesta · embeds finales sustituibles editando los iframes</p>
+    <p class="subtitle" style="margin-top:18px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);">Click en cualquier video para reproducir · embeds editables (atributo data-yt-id)</p>
   </div>
 
   <div class="slide__footer">
@@ -2305,9 +2340,37 @@ h3 {
 
   deck.addEventListener('click', function(e) {
     if (e.target.closest('a')) return;
+    if (e.target.closest('.video-tile')) return;
     const x = e.clientX / window.innerWidth;
     if (x > 0.75) next();
     else if (x < 0.25) prev();
+  });
+
+  // Lite YouTube — load iframe on click
+  document.querySelectorAll('.video-tile[data-yt-id]').forEach(function(tile) {
+    tile.addEventListener('click', function(ev) {
+      ev.stopPropagation();
+      if (tile.querySelector('iframe')) return;
+      const id = tile.dataset.ytId;
+      const title = tile.dataset.ytTitle || '';
+      const caption = tile.querySelector('.video-tile__caption');
+      const captionHTML = caption ? caption.outerHTML : '';
+      tile.innerHTML =
+        '<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1" ' +
+        'title="' + title.replace(/"/g, '&quot;') + '" frameborder="0" ' +
+        'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
+        'allowfullscreen></iframe>' + captionHTML;
+    });
+  });
+
+  // Thumbnail fallback: maxresdefault → hqdefault
+  document.querySelectorAll('.video-tile__thumb').forEach(function(img) {
+    img.addEventListener('error', function() {
+      const id = img.closest('.video-tile').dataset.ytId;
+      if (id && img.src.indexOf('maxresdefault') !== -1) {
+        img.src = 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg';
+      }
+    });
   });
 
   bar.style.width = '0%';
