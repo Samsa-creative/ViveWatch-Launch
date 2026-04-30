@@ -1042,6 +1042,141 @@ h3 {
   flex-shrink: 0;
 }
 
+/* ============================================
+   THREE WORLDS DIAGRAM (slide 2)
+   ============================================ */
+.three-worlds {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  aspect-ratio: 1.15 / 1;
+  margin: 0 auto;
+}
+
+.three-worlds__svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.three-worlds__svg line {
+  stroke: rgba(255,255,255,0.28);
+  stroke-width: 1.2;
+}
+
+.three-worlds__pill {
+  position: absolute;
+  padding: 11px 22px;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  border-radius: 999px;
+  background: var(--navy-deep);
+  color: var(--paper);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 3;
+  line-height: 1.25;
+}
+
+.three-worlds__pill--top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.three-worlds__pill--left {
+  bottom: 4%;
+  left: 0;
+}
+
+.three-worlds__pill--right {
+  bottom: 4%;
+  right: 0;
+}
+
+.three-worlds__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.three-worlds__orb {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, #1CE867 0%, #37CFA8 35%, #5CAEFF 70%, #385E9D 100%);
+  filter: blur(28px);
+  opacity: 0.65;
+}
+
+.three-worlds__samsa {
+  position: relative;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--paper);
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+/* Slide 2 — title with gradient underline */
+.title-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+}
+
+.title-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--aurora);
+}
+
+.bullet-arrow-list {
+  list-style: none;
+  margin-top: 24px;
+}
+
+.bullet-arrow-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 10px 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--fog);
+}
+
+.bullet-arrow-list li::before {
+  content: '→';
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.bullet-arrow-list strong {
+  color: var(--paper);
+  font-weight: 700;
+}
+
 /* Clients grid placeholder */
 .clients-grid {
   display: grid;
@@ -1214,24 +1349,51 @@ h3 {
      SLIDE 02 — CARÁTULA SERVICIOS SAMSA CREATIVE
      ========================================== -->
 <section class="slide slide--dark" data-section="SAMSA CREATIVE">
-  <div class="orb" style="width:480px;height:480px;top:60px;right:-40px;opacity:0.38;"></div>
-  <div class="blob" style="width:540px;height:220px;bottom:120px;left:-60px;opacity:0.22;transform:rotate(15deg);"></div>
+  <div class="blob" style="width:540px;height:220px;bottom:80px;left:-60px;opacity:0.18;transform:rotate(15deg);"></div>
 
   <div class="slide__content">
-    <p class="eyebrow" style="color:var(--fog);">QUIÉNES SOMOS</p>
-    <h1 style="font-size:clamp(48px,6vw,84px);max-width:920px;">
-      Samsa Creative.<br>
-      <span class="gradient-text">Estrategia, contenido y producción.</span>
-    </h1>
-    <p class="body" style="margin-top:28px;color:var(--fog);max-width:720px;">Estudio creativo-tecnológico AI native. Diseñamos el concepto, dirigimos la producción y escalamos los assets con IA generativa para que cada campaña rinda durante todo el año.</p>
+    <div class="grid-2" style="gap:60px;align-items:center;">
+      <div>
+        <h1 class="title-underline" style="font-size:clamp(44px,5.2vw,72px);">Samsa Creative</h1>
+        <p style="font-size:clamp(15px,1.2vw,18px);color:var(--fog);line-height:1.55;">
+          Somos <strong style="color:var(--paper);">una agencia creativa</strong> que une lo mejor de <strong style="color:var(--paper);">tres mundos:</strong>
+        </p>
 
-    <ul class="services-list" style="max-width:780px;">
-      <li>Communication Strategy y concepto paraguas</li>
-      <li>Producción audiovisual cinematográfica (filming + post)</li>
-      <li>Iteración de contenido con IA generativa</li>
-      <li>Contenido para redes sociales y paid media</li>
-      <li>Brand Strategy y dirección creativa</li>
-    </ul>
+        <ul class="bullet-arrow-list">
+          <li>La sensibilidad artística de un estudio especializado en <strong>contenido gráfico y audiovisual de excelencia.</strong></li>
+          <li>La visión estratégica de una agencia de comunicación <strong>que transforma ideas en estrategias basadas en datos y audiencias.</strong></li>
+          <li>La tecnología y las <strong>herramientas de inteligencia artificial</strong> que optimizan los tiempos de entrega combinando productividad y agilidad creativa dentro de un <strong>pipeline eficiente.</strong></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="three-worlds">
+          <svg class="three-worlds__svg" viewBox="0 0 540 470" preserveAspectRatio="xMidYMid meet">
+            <!-- Lines connecting the 3 pills, behind the central orb -->
+            <line x1="270" y1="32" x2="78" y2="430" />
+            <line x1="270" y1="32" x2="462" y2="430" />
+            <line x1="78" y1="430" x2="462" y2="430" />
+          </svg>
+
+          <div class="three-worlds__pill three-worlds__pill--top">
+            ESTUDIO<br>CREATIVO
+          </div>
+
+          <div class="three-worlds__center">
+            <div class="three-worlds__orb"></div>
+            <span class="three-worlds__samsa">SAMSA</span>
+          </div>
+
+          <div class="three-worlds__pill three-worlds__pill--left">
+            TECNOLOGÍA<br>+ IA
+          </div>
+
+          <div class="three-worlds__pill three-worlds__pill--right">
+            AGENCIA<br>ESTRATÉGICA
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="slide__footer">
