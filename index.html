@@ -817,6 +817,57 @@ h3 {
 }
 
 /* ============================================
+   WEB + TESTIMONIALES SECTION (slide 20)
+   ============================================ */
+.web-section {
+  margin-top: 18px;
+}
+
+.web-section__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1.5px solid var(--mist);
+}
+
+.web-section__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.web-section__hint {
+  font-size: 11px;
+  color: var(--steel);
+  font-style: italic;
+}
+
+.web-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.web-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+  height: 220px;
+}
+
+.web-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+  height: 240px;
+}
+
+.web-grid .video-tile {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ============================================
    HITO MOODBOARD COMPACTO (slides 13-16)
    ============================================ */
 .hito-layout {
@@ -878,9 +929,11 @@ h3 {
 }
 
 .hito-visual--lanzamiento { background: linear-gradient(135deg, #1D2F49 0%, #5CAEFF 100%); }
+.hito-visual--continuidad { background: linear-gradient(135deg, #1F3D3A 0%, #37CFA8 60%, #A9C8B0 100%); }
 .hito-visual--navidad { background: linear-gradient(135deg, #2D1A0F 0%, #8B5A3C 60%, #C99979 100%); }
 .hito-visual--padre { background: linear-gradient(135deg, #2C3E2D 0%, #6B8E5A 60%, #C9B679 100%); }
 .hito-visual--madre { background: linear-gradient(135deg, #4A2E3D 0%, #A06A78 60%, #E8C5B4 100%); }
+.hito-visual--web { background: linear-gradient(135deg, #1D2F49 0%, #385E9D 60%, #5CAEFF 100%); }
 
 .hito-visual__placeholder {
   position: absolute;
@@ -1926,7 +1979,10 @@ h3 {
       </div>
 
       <div class="hito-visual hito-visual--lanzamiento">
-        <span class="hito-visual__placeholder">Placeholder · imagen referencia</span>
+        <div class="video-tile" data-yt-id="BPohzi5IwSA" data-yt-title="Referencia Lanzamiento" style="position:absolute;inset:0;border-radius:16px;">
+          <img class="video-tile__thumb" src="https://i.ytimg.com/vi/BPohzi5IwSA/maxresdefault.jpg" alt="Referencia Lanzamiento" loading="lazy">
+          <div class="video-tile__playbtn"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -1939,7 +1995,60 @@ h3 {
 </section>
 
 <!-- ==========================================
-     SLIDE 14 — HITO 02 · NAVIDAD (foco visual)
+     SLIDE 16 — HITO · CONTINUIDAD (foco visual)
+     ========================================== -->
+<section class="slide slide--light" data-section="04 · REFERENCIAS POR HITO">
+  <div class="blob" style="width:380px;height:180px;top:-40px;left:-50px;opacity:0.08;"></div>
+
+  <div class="slide__content slide__content--top">
+    <p class="eyebrow">HITO · CONTINUIDAD · A LO LARGO DEL AÑO</p>
+    <h1>Las manos que <span class="gradient-text">siguen, día a día</span>.</h1>
+
+    <div class="hito-layout">
+      <div class="hito-text">
+        <h3 style="font-size:22px;line-height:1.2;">Enfoque visual</h3>
+        <p class="moodboard__concept">
+          La continuidad del cuidado en los gestos cotidianos. Una apertura visual común que enlaza todas las mini campañas del año + escenas en un escenario doméstico real. El watch como presencia silenciosa.
+        </p>
+
+        <div class="hito-meta">
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Locación</div>
+            <div class="hito-meta__value">Casa real · ambientes domésticos</div>
+          </div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Paleta</div>
+            <div class="hito-meta__value">Cálida, neutra, atemporal</div>
+          </div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Recurso clave</div>
+            <div class="hito-meta__value">Apertura visual común que da continuidad a todas las mini campañas</div>
+          </div>
+          <div class="hito-meta__item">
+            <div class="hito-meta__label">Producción</div>
+            <div class="hito-meta__value">Iteración IA + b-roll campaña</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hito-visual hito-visual--continuidad">
+        <div class="video-tile" data-yt-id="QxfCyEUkFzM" data-yt-title="Referencia Continuidad" style="position:absolute;inset:0;border-radius:16px;">
+          <img class="video-tile__thumb" src="https://i.ytimg.com/vi/QxfCyEUkFzM/maxresdefault.jpg" alt="Referencia Continuidad" loading="lazy">
+          <div class="video-tile__playbtn"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide__footer">
+    <img src="logo-samsa-light.png" class="logo-samsa--footer" alt="Samsa">
+    <div class="slide__footer__center" style="color:var(--steel);">04 · REFERENCIAS POR HITO</div>
+    <div class="slide__footer__right" style="color:var(--steel);">16</div>
+  </div>
+</section>
+
+<!-- ==========================================
+     SLIDE 17 — HITO · NAVIDAD (foco visual)
      ========================================== -->
 <section class="slide slide--light" data-section="04 · REFERENCIAS POR HITO">
   <div class="blob" style="width:380px;height:180px;bottom:-40px;left:-40px;opacity:0.08;"></div>
@@ -1976,7 +2085,10 @@ h3 {
       </div>
 
       <div class="hito-visual hito-visual--navidad">
-        <span class="hito-visual__placeholder">Placeholder · imagen referencia</span>
+        <div class="video-tile" data-yt-id="Ij18UVSmgIU" data-yt-title="Referencia Navidad" style="position:absolute;inset:0;border-radius:16px;">
+          <img class="video-tile__thumb" src="https://i.ytimg.com/vi/Ij18UVSmgIU/maxresdefault.jpg" alt="Referencia Navidad" loading="lazy">
+          <div class="video-tile__playbtn"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -1984,12 +2096,12 @@ h3 {
   <div class="slide__footer">
     <img src="logo-samsa-light.png" class="logo-samsa--footer" alt="Samsa">
     <div class="slide__footer__center" style="color:var(--steel);">04 · REFERENCIAS POR HITO</div>
-    <div class="slide__footer__right" style="color:var(--steel);">16</div>
+    <div class="slide__footer__right" style="color:var(--steel);">17</div>
   </div>
 </section>
 
 <!-- ==========================================
-     SLIDE 15 — HITO 03 · DÍA DEL PADRE (foco visual)
+     SLIDE 18 — HITO · DÍA DEL PADRE (foco visual)
      ========================================== -->
 <section class="slide slide--light" data-section="04 · REFERENCIAS POR HITO">
   <div class="blob" style="width:380px;height:180px;top:-40px;right:-50px;opacity:0.08;"></div>
@@ -2026,7 +2138,7 @@ h3 {
       </div>
 
       <div class="hito-visual hito-visual--padre">
-        <span class="hito-visual__placeholder">Placeholder · imagen referencia</span>
+        <iframe src="https://www.instagram.com/reel/DWBSz_HiHUM/embed/" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:16px;background:#0c1322;"></iframe>
       </div>
     </div>
   </div>
@@ -2034,7 +2146,7 @@ h3 {
   <div class="slide__footer">
     <img src="logo-samsa-light.png" class="logo-samsa--footer" alt="Samsa">
     <div class="slide__footer__center" style="color:var(--steel);">04 · REFERENCIAS POR HITO</div>
-    <div class="slide__footer__right" style="color:var(--steel);">17</div>
+    <div class="slide__footer__right" style="color:var(--steel);">18</div>
   </div>
 </section>
 
@@ -2076,7 +2188,10 @@ h3 {
       </div>
 
       <div class="hito-visual hito-visual--madre">
-        <span class="hito-visual__placeholder">Placeholder · imagen referencia</span>
+        <div class="video-tile" data-yt-id="Rc7fbV8toVc" data-yt-title="Referencia Día de la Madre" style="position:absolute;inset:0;border-radius:16px;">
+          <img class="video-tile__thumb" src="https://i.ytimg.com/vi/Rc7fbV8toVc/maxresdefault.jpg" alt="Referencia Día de la Madre" loading="lazy">
+          <div class="video-tile__playbtn"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -2084,12 +2199,74 @@ h3 {
   <div class="slide__footer">
     <img src="logo-samsa-light.png" class="logo-samsa--footer" alt="Samsa">
     <div class="slide__footer__center" style="color:var(--steel);">04 · REFERENCIAS POR HITO</div>
-    <div class="slide__footer__right" style="color:var(--steel);">18</div>
+    <div class="slide__footer__right" style="color:var(--steel);">19</div>
   </div>
 </section>
 
 <!-- ==========================================
-     SLIDE 17 — SECTION DIVIDER · PLAN
+     SLIDE 20 — HITO · WEB + TESTIMONIALES (foco visual)
+     ========================================== -->
+<section class="slide slide--light" data-section="04 · REFERENCIAS POR HITO">
+  <div class="blob" style="width:380px;height:180px;top:-40px;right:-50px;opacity:0.08;"></div>
+
+  <div class="slide__content slide__content--top">
+    <p class="eyebrow">HITO · WEB + TESTIMONIALES · JUNIO 2026</p>
+    <h1>Las manos de la web. <span class="gradient-text">El primer encuentro.</span></h1>
+    <p class="body" style="margin-top:14px;font-size:14px;max-width:1080px;">Video hero + 3 testimoniales para el lanzamiento del e-commerce. Las primeras piezas que se rodaron en el Hito A y abren la conversación de marca antes de la campaña comercial.</p>
+
+    <div class="web-section">
+      <div class="web-section__head">
+        <span class="web-section__label">Referencias · 3 Testimoniales (90")</span>
+        <span class="web-section__hint">Savefamilygps · Sanitas · Ilunion</span>
+      </div>
+      <div class="web-grid web-grid--3">
+        <div class="video-tile" data-yt-id="ft76YxWdb7k" data-yt-title="Savefamilygps — Testimonial">
+          <img class="video-tile__thumb" src="https://i.ytimg.com/vi/ft76YxWdb7k/maxresdefault.jpg" alt="Savefamilygps testimonial" loading="lazy">
+          <div class="video-tile__playbtn"></div>
+          <span class="video-tile__caption">Savefamilygps</span>
+        </div>
+        <div class="video-tile" data-yt-id="uq_LL_UIHsI" data-yt-title="Sanitas — Testimonial">
+          <img class="video-tile__thumb" src="https://i.ytimg.com/vi/uq_LL_UIHsI/maxresdefault.jpg" alt="Sanitas testimonial" loading="lazy">
+          <div class="video-tile__playbtn"></div>
+          <span class="video-tile__caption">Sanitas</span>
+        </div>
+        <div class="video-tile" data-yt-id="RkPRH_Tl_Ng" data-yt-title="Ilunion — Testimonial">
+          <img class="video-tile__thumb" src="https://i.ytimg.com/vi/RkPRH_Tl_Ng/maxresdefault.jpg" alt="Ilunion testimonial" loading="lazy">
+          <div class="video-tile__playbtn"></div>
+          <span class="video-tile__caption">Ilunion</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="web-section">
+      <div class="web-section__head">
+        <span class="web-section__label">Referencias · Video Hero Web (10—20")</span>
+        <span class="web-section__hint">Look & feel premium · tecnología + parte humana</span>
+      </div>
+      <div class="web-grid web-grid--2">
+        <div class="video-tile" data-yt-id="EypozjB8j1E" data-yt-title="Referencia video web 1">
+          <img class="video-tile__thumb" src="https://i.ytimg.com/vi/EypozjB8j1E/maxresdefault.jpg" alt="Referencia video web 1" loading="lazy">
+          <div class="video-tile__playbtn"></div>
+          <span class="video-tile__caption">Video Web · Ref 01</span>
+        </div>
+        <div class="video-tile" data-yt-id="rJv_q18jqQw" data-yt-title="Referencia video web 2">
+          <img class="video-tile__thumb" src="https://i.ytimg.com/vi/rJv_q18jqQw/maxresdefault.jpg" alt="Referencia video web 2" loading="lazy">
+          <div class="video-tile__playbtn"></div>
+          <span class="video-tile__caption">Video Web · Ref 02</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide__footer">
+    <img src="logo-samsa-light.png" class="logo-samsa--footer" alt="Samsa">
+    <div class="slide__footer__center" style="color:var(--steel);">04 · REFERENCIAS POR HITO</div>
+    <div class="slide__footer__right" style="color:var(--steel);">20</div>
+  </div>
+</section>
+
+<!-- ==========================================
+     SLIDE 21 — SECTION DIVIDER · PLAN
      ========================================== -->
 <section class="slide slide--dark" data-section="SECCIÓN 5">
   <div class="orb" style="width:420px;height:420px;top:120px;right:200px;opacity:0.42;"></div>
@@ -2109,7 +2286,7 @@ h3 {
   <div class="slide__footer">
     <img src="logo-samsa-dark.png" class="logo-samsa--footer" alt="Samsa">
     <div class="slide__footer__center" style="color:var(--fog);">SECCIÓN 5</div>
-    <div class="slide__footer__right" style="color:var(--fog);">19</div>
+    <div class="slide__footer__right" style="color:var(--fog);">21</div>
   </div>
 </section>
 
@@ -2181,7 +2358,7 @@ h3 {
   <div class="slide__footer">
     <img src="logo-samsa-light.png" class="logo-samsa--footer" alt="Samsa">
     <div class="slide__footer__center" style="color:var(--steel);">05 · PLAN</div>
-    <div class="slide__footer__right" style="color:var(--steel);">20</div>
+    <div class="slide__footer__right" style="color:var(--steel);">22</div>
   </div>
 </section>
 
@@ -2270,7 +2447,7 @@ h3 {
   <div class="slide__footer">
     <img src="logo-samsa-light.png" class="logo-samsa--footer" alt="Samsa">
     <div class="slide__footer__center" style="color:var(--steel);">05 · PLAN</div>
-    <div class="slide__footer__right" style="color:var(--steel);">21</div>
+    <div class="slide__footer__right" style="color:var(--steel);">23</div>
   </div>
 </section>
 
@@ -2294,7 +2471,7 @@ h3 {
   <div class="slide__footer">
     <img src="logo-samsa-dark.png" class="logo-samsa--footer" alt="Samsa">
     <div class="slide__footer__center" style="color:var(--fog);">SECCIÓN 6</div>
-    <div class="slide__footer__right" style="color:var(--fog);">22</div>
+    <div class="slide__footer__right" style="color:var(--fog);">24</div>
   </div>
 </section>
 
@@ -2382,7 +2559,7 @@ h3 {
   <div class="slide__footer">
     <img src="logo-samsa-light.png" class="logo-samsa--footer" alt="Samsa">
     <div class="slide__footer__center" style="color:var(--steel);">06 · PRESUPUESTO</div>
-    <div class="slide__footer__right" style="color:var(--steel);">23</div>
+    <div class="slide__footer__right" style="color:var(--steel);">25</div>
   </div>
 </section>
 
