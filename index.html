@@ -1177,20 +1177,29 @@ h3 {
   font-weight: 700;
 }
 
-/* Clients hero image */
-.clients-hero {
-  margin: 24px auto 0;
-  max-width: 1180px;
+/* Clients full-bleed slide */
+.clients-fullscreen {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 24px 60px rgba(29,47,73,0.18);
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 0;
 }
 
-.clients-hero img {
-  display: block;
-  width: 100%;
-  height: auto;
+.slide--clients-fullbleed .slide__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  color: var(--fog);
+}
+
+.slide--clients-fullbleed .slide__footer__center,
+.slide--clients-fullbleed .slide__footer__right {
+  color: rgba(255,255,255,0.55);
 }
 
 /* Tone attributes (4 col) */
@@ -1374,24 +1383,15 @@ h3 {
 </section>
 
 <!-- ==========================================
-     SLIDE 03 — CARÁTULA CLIENTES
+     SLIDE 03 — CARÁTULA CLIENTES (FULL-BLEED)
      ========================================== -->
-<section class="slide slide--light" data-section="CLIENTES">
-  <div class="blob" style="width:380px;height:200px;bottom:-40px;right:-50px;opacity:0.1;"></div>
-
-  <div class="slide__content slide__content--top">
-    <p class="eyebrow">TRUSTED BY</p>
-    <h1 style="max-width:920px;">Equipos que confían en <span class="gradient-text">Samsa</span> para lanzar, escalar y comunicar.</h1>
-
-    <div class="clients-hero">
-      <img src="logos-clientes.jpg" alt="Clientes Samsa: Heinz, McDonald's, Coca-Cola, Natura, Yoplait, Glovo, Chevrolet, RE/MAX, Forbes, Inditex, Ocean Bank, Visa, Schneider Electric, MSD, GSK, Sanofi, Johnson & Johnson, Puma, Nike, El Corte Inglés, SoundCloud, Adobe, Whirlpool" loading="lazy">
-    </div>
-  </div>
+<section class="slide slide--dark slide--clients-fullbleed" data-section="CLIENTES">
+  <img class="clients-fullscreen" src="logos-clientes.jpg" alt="Clientes Samsa: Heinz, McDonald's, Coca-Cola, Natura, Yoplait, Glovo, Chevrolet, RE/MAX, Forbes, Inditex, Ocean Bank, Visa, Schneider Electric, MSD, GSK, Sanofi, Johnson & Johnson, Puma, Nike, El Corte Inglés, SoundCloud, Adobe, Whirlpool">
 
   <div class="slide__footer">
-    <img src="logo-samsa-light.png" class="logo-samsa--footer" alt="Samsa">
-    <div class="slide__footer__center" style="color:var(--steel);">CLIENTES</div>
-    <div class="slide__footer__right" style="color:var(--steel);">03</div>
+    <img src="logo-samsa-dark.png" class="logo-samsa--footer" alt="Samsa">
+    <div class="slide__footer__center">CLIENTES</div>
+    <div class="slide__footer__right">03</div>
   </div>
 </section>
 
