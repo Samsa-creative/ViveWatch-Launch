@@ -911,6 +911,60 @@ h3 {
   line-height: 1.4;
 }
 
+/* Entregables del brief — lista compacta 2 cols dentro del hito-text */
+.hito-deliv {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1.5px solid var(--mist);
+}
+
+.hito-deliv__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.hito-deliv__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.hito-deliv__count {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal);
+  letter-spacing: 0.04em;
+}
+
+.hito-deliv ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px 16px;
+}
+
+.hito-deliv li {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--navy);
+  padding: 2px 0 2px 11px;
+  position: relative;
+}
+
+.hito-deliv li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--teal);
+  font-weight: 700;
+}
+
 .hito-visual {
   position: relative;
   border-radius: 16px;
@@ -1974,31 +2028,28 @@ h3 {
       <div class="hito-text">
         <h3 style="font-size:22px;line-height:1.2;">Enfoque visual</h3>
         <p class="moodboard__concept">
-          Tomas íntimas, luz natural cálida, la jornada cotidiana como hero. El watch entra y sale del cuadro como un detalle más, nunca anunciado. Cierre con la línea <em>"Sigue siendo tú."</em>
+          Tomas íntimas, luz natural cálida, la jornada cotidiana como hero. Interior cálido + exterior urbano, paleta tierras con naranja ViveLibre. El watch entra y sale del cuadro como un detalle más, nunca anunciado.
         </p>
 
-        <div class="hito-meta">
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Locación</div>
-            <div class="hito-meta__value">Interior cálido + exterior urbano</div>
+        <div class="hito-deliv">
+          <div class="hito-deliv__head">
+            <span class="hito-deliv__label">Entregables del brief</span>
+            <span class="hito-deliv__count">19 piezas + cuña</span>
           </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Paleta</div>
-            <div class="hito-meta__value">Tierras + naranja ViveLibre como acento</div>
-          </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Lente</div>
-            <div class="hito-meta__value">Primes 35/50/85mm · cámara estable</div>
-          </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Hero pieza</div>
-            <div class="hito-meta__value">Spot 30/45" + cortes 15"</div>
-          </div>
-        </div>
-
-        <div style="margin-top:16px;padding:12px 16px;background:var(--mist);border-radius:10px;border-left:3px solid var(--teal);">
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--steel);margin-bottom:4px;">Cuñas</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5;">Cuña de radio para el lanzamiento, alineada con el tono del spot y la promesa de marca.</div>
+          <ul>
+            <li>1 spot largo 16:9 (30/45")</li>
+            <li>3 reels (15")</li>
+            <li>3 posts feed</li>
+            <li>3 stories</li>
+            <li>Adaptación vertical</li>
+            <li>Adaptaciones horizontales reels</li>
+            <li>Biblioteca de imágenes</li>
+            <li>Gráfica estática (.psd + jpg/png)</li>
+            <li>Banner GIF 300×250</li>
+            <li>Banner GIF 300×600</li>
+            <li>Banner GIF 320×100</li>
+            <li>Cuña de radio</li>
+          </ul>
         </div>
       </div>
 
@@ -2032,26 +2083,28 @@ h3 {
       <div class="hito-text">
         <h3 style="font-size:22px;line-height:1.2;">Enfoque visual</h3>
         <p class="moodboard__concept">
-          La continuidad del cuidado en los gestos cotidianos. Una apertura visual común que enlaza todas las mini campañas del año + escenas en un escenario doméstico real. El watch como presencia silenciosa.
+          La continuidad del cuidado en los gestos cotidianos. Una apertura visual común que enlaza todas las mini campañas del año, escenas en un escenario doméstico real, paleta cálida y neutra. El watch como presencia silenciosa.
         </p>
 
-        <div class="hito-meta">
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Locación</div>
-            <div class="hito-meta__value">Casa real · ambientes domésticos</div>
+        <div class="hito-deliv">
+          <div class="hito-deliv__head">
+            <span class="hito-deliv__label">Entregables del brief · por ola</span>
+            <span class="hito-deliv__count">15 piezas × 4 = 60</span>
           </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Paleta</div>
-            <div class="hito-meta__value">Cálida, neutra, atemporal</div>
-          </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Recurso clave</div>
-            <div class="hito-meta__value">Apertura visual común que da continuidad a todas las mini campañas</div>
-          </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Producción</div>
-            <div class="hito-meta__value">Iteración IA + b-roll campaña</div>
-          </div>
+          <ul>
+            <li>1 reel teaser</li>
+            <li>1 video largo (Spot Continuidad)</li>
+            <li>3 posts feed</li>
+            <li>3 stories</li>
+            <li>Adaptación vertical</li>
+            <li>Adaptaciones horizontales reels</li>
+            <li>Biblioteca de imágenes</li>
+            <li>Gráfica estática (.psd + jpg/png)</li>
+            <li>Banner GIF 300×250</li>
+            <li>Banner GIF 300×600</li>
+            <li>Banner GIF 320×100</li>
+          </ul>
+          <p style="font-size:11px;color:var(--steel);margin-top:8px;font-style:italic;">Olas: sep/nov 2026 · ene/mar 2027 · mar/abr 2027 · may/jun 2027</p>
         </div>
       </div>
 
@@ -2088,28 +2141,30 @@ h3 {
           Atmósfera de mesa familiar nocturna. Luz cálida, sombras suaves, primer plano de manos. ViveWatch aparece como una joya útil entre los gestos compartidos, sin escenificación, sin alarma.
         </p>
 
-        <div class="hito-meta">
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Locación</div>
-            <div class="hito-meta__value">Interior nocturno · velas, fuego, mesa</div>
+        <div class="hito-deliv">
+          <div class="hito-deliv__head">
+            <span class="hito-deliv__label">Entregables del brief</span>
+            <span class="hito-deliv__count">15 piezas + cuña</span>
           </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Paleta</div>
-            <div class="hito-meta__value">Cálido, ámbar, terroso</div>
-          </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Producción</div>
-            <div class="hito-meta__value">Iteración IA sobre rodaje base + insert</div>
-          </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Hero pieza</div>
-            <div class="hito-meta__value">Spot 30" + adaptaciones digitales</div>
-          </div>
+          <ul>
+            <li>1 reel teaser</li>
+            <li>1 video largo (Spot Navidad 30")</li>
+            <li>3 posts feed</li>
+            <li>3 stories</li>
+            <li>Adaptación vertical</li>
+            <li>Adaptaciones horizontales reels</li>
+            <li>Biblioteca de imágenes</li>
+            <li>Gráfica estática (.psd + jpg/png)</li>
+            <li>Banner GIF 300×250</li>
+            <li>Banner GIF 300×600</li>
+            <li>Banner GIF 320×100</li>
+            <li>Cuña de radio</li>
+          </ul>
         </div>
 
-        <div style="margin-top:16px;padding:12px 16px;background:var(--mist);border-radius:10px;border-left:3px solid var(--teal);">
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--steel);margin-bottom:4px;">Cuñas</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5;">Proponemos utilizar esta cuña para Nochevieja, buscando también estar presentes en esta fecha importante.</div>
+        <div style="margin-top:14px;padding:10px 14px;background:var(--mist);border-radius:10px;border-left:3px solid var(--teal);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--steel);margin-bottom:3px;">Cuña Nochevieja</div>
+          <div style="font-size:12px;color:var(--navy);line-height:1.45;">Proponemos utilizar esta cuña para Nochevieja, buscando también estar presentes en esta fecha importante.</div>
         </div>
       </div>
 
@@ -2143,26 +2198,27 @@ h3 {
       <div class="hito-text">
         <h3 style="font-size:22px;line-height:1.2;">Enfoque visual</h3>
         <p class="moodboard__concept">
-          Exterior, luz dorada, movimiento real. La actividad del día (caminata, taller, jardín) cuenta la historia sin narración. El watch es extensión de autonomía, no dispositivo de vigilancia.
+          Exterior, luz dorada, movimiento real. Campo, taller o pueblo, paleta dorada con verdes naturales. La actividad del día cuenta la historia sin narración. El watch como extensión de autonomía, no dispositivo de vigilancia.
         </p>
 
-        <div class="hito-meta">
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Locación</div>
-            <div class="hito-meta__value">Exterior · campo, taller, pueblo</div>
+        <div class="hito-deliv">
+          <div class="hito-deliv__head">
+            <span class="hito-deliv__label">Entregables del brief</span>
+            <span class="hito-deliv__count">15 piezas</span>
           </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Paleta</div>
-            <div class="hito-meta__value">Dorada · verdes naturales · piel real</div>
-          </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Producción</div>
-            <div class="hito-meta__value">Iteración IA + b-roll campaña</div>
-          </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Hero pieza</div>
-            <div class="hito-meta__value">Spot 30" + 3 stories + carrusel</div>
-          </div>
+          <ul>
+            <li>1 reel teaser</li>
+            <li>1 video largo (Spot Día del Padre)</li>
+            <li>3 posts feed</li>
+            <li>3 stories</li>
+            <li>Adaptación vertical</li>
+            <li>Adaptaciones horizontales reels</li>
+            <li>Biblioteca de imágenes</li>
+            <li>Gráfica estática (.psd + jpg/png)</li>
+            <li>Banner GIF 300×250</li>
+            <li>Banner GIF 300×600</li>
+            <li>Banner GIF 320×100</li>
+          </ul>
         </div>
       </div>
 
@@ -2193,26 +2249,27 @@ h3 {
       <div class="hito-text">
         <h3 style="font-size:22px;line-height:1.2;">Enfoque visual</h3>
         <p class="moodboard__concept">
-          Su vida cotidiana intacta. Cocina, lectura, paseo, conversación. ViveWatch en muñeca como joya. Plano cerrado al final, sin gesto excepcional. La identidad sigue siendo ella.
+          Su vida cotidiana intacta. Cocina, lectura, paseo, conversación. Interior cálido o plaza luminosa, paleta cálida y rosada terrosa. ViveWatch en muñeca como joya. Plano cerrado al final, sin gesto excepcional. La identidad sigue siendo ella.
         </p>
 
-        <div class="hito-meta">
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Locación</div>
-            <div class="hito-meta__value">Interior cálido + plaza luminosa</div>
+        <div class="hito-deliv">
+          <div class="hito-deliv__head">
+            <span class="hito-deliv__label">Entregables del brief</span>
+            <span class="hito-deliv__count">15 piezas</span>
           </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Paleta</div>
-            <div class="hito-meta__value">Cálida, rosada, terrosa</div>
-          </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Producción</div>
-            <div class="hito-meta__value">Iteración IA + b-roll campaña</div>
-          </div>
-          <div class="hito-meta__item">
-            <div class="hito-meta__label">Hero pieza</div>
-            <div class="hito-meta__value">Spot 30" + 3 stories + carrusel</div>
-          </div>
+          <ul>
+            <li>1 reel teaser</li>
+            <li>1 video largo (Spot Día de la Madre)</li>
+            <li>3 posts feed</li>
+            <li>3 stories</li>
+            <li>Adaptación vertical</li>
+            <li>Adaptaciones horizontales reels</li>
+            <li>Biblioteca de imágenes</li>
+            <li>Gráfica estática (.psd + jpg/png)</li>
+            <li>Banner GIF 300×250</li>
+            <li>Banner GIF 300×600</li>
+            <li>Banner GIF 320×100</li>
+          </ul>
         </div>
       </div>
 
