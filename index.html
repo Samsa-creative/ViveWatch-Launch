@@ -1154,10 +1154,8 @@ h3 {
 }
 
 .bullet-arrow-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 10px 0;
+  position: relative;
+  padding: 10px 0 10px 28px;
   font-size: 15px;
   line-height: 1.55;
   color: var(--fog);
@@ -1168,8 +1166,9 @@ h3 {
   color: var(--teal);
   font-weight: 700;
   font-size: 16px;
-  flex-shrink: 0;
-  margin-top: 1px;
+  position: absolute;
+  left: 0;
+  top: 11px;
 }
 
 .bullet-arrow-list strong {
@@ -1490,10 +1489,10 @@ h3 {
         </div>
       </div>
       <div>
-        <h3 style="margin-bottom:12px;">Lo que pidieron</h3>
+        <h3 style="margin-bottom:12px;">Scope solicitado</h3>
         <ul style="list-style:none;">
           <li style="padding:10px 0;border-bottom:1px solid var(--mist);font-size:15px;"><strong>Concepto paraguas</strong> que sostenga campaña y comunicación 2026—2027</li>
-          <li style="padding:10px 0;border-bottom:1px solid var(--mist);font-size:15px;"><strong>7 hitos de campaña</strong>: Lanzamiento, Verano, 4× Continuidad, Navidad, Padre, Madre</li>
+          <li style="padding:10px 0;border-bottom:1px solid var(--mist);font-size:15px;"><strong>7 hitos de campaña</strong>: Lanzamiento, Verano, Continuidad, Navidad, Padre, Madre</li>
           <li style="padding:10px 0;border-bottom:1px solid var(--mist);font-size:15px;"><strong>Producción audiovisual</strong> de alta calidad (web + spots + redes)</li>
           <li style="padding:10px 0;font-size:15px;"><strong>Eficiencia escalable</strong> sin sacrificar el look premium</li>
         </ul>
@@ -1789,44 +1788,47 @@ h3 {
 
   <div class="slide__content slide__content--top">
     <p class="eyebrow">REFERENCIA DE CAMPAÑA</p>
-    <h1>La dirección creativa, en una toma.</h1>
+    <h1>Una campaña que <span class="gradient-text">se modula sin romperse</span>.</h1>
 
-    <div class="moodboard" style="margin-top:48px;">
+    <div class="moodboard" style="margin-top:36px;">
       <div class="moodboard__text">
-        <h3 style="font-size:24px;">Dirección creativa</h3>
-        <p class="moodboard__concept">
-          Tomas cinematográficas de ritmo lento. Primer plano del watch como detalle de joyería tech, luz natural cálida, gestos cotidianos como protagonista. La cámara al servicio del usuario, no del producto. Cierre íntimo: una mirada, un gesto, el watch responde sin interrumpir.
+        <p class="body" style="font-size:15px;color:var(--navy);">
+          La campaña no es un spot único. Es un <strong>sistema modular</strong> alrededor de "En buenas manos". Cada hito retoma el territorio narrativo de las manos modulando contexto y momento — nunca la voz ni la promesa.
         </p>
 
-        <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);margin-bottom:6px;">Casting</div>
-            <div style="font-size:14px;">Actores 55—75, reales-pero-aspiracionales. No usuarios reales (decisión validada en reunión).</div>
+        <div style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;">
+          <div style="border-top:2px solid var(--pulse-green);padding-top:10px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--steel);margin-bottom:4px;">Lanzamiento</div>
+            <div style="font-size:13px;color:var(--navy);line-height:1.45;">La <strong>primera mano</strong> que recibe el ViveWatch. Abre la categoría sin alarma.</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);margin-bottom:6px;">Color script</div>
-            <div style="font-size:14px;">Paletas tierra cálidas + azul ViveLibre como acento sutil. Skin tones reales.</div>
+          <div style="border-top:2px solid var(--teal);padding-top:10px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--steel);margin-bottom:4px;">Navidad</div>
+            <div style="font-size:13px;color:var(--navy);line-height:1.45;">Las <strong>manos que se reúnen</strong> en torno a la mesa. El dispositivo como regalo silencioso.</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);margin-bottom:6px;">Lente y cámara</div>
-            <div style="font-size:14px;">Primes 35/50/85mm. Cámara estable, dolly cortos. Sin handheld nervioso.</div>
+          <div style="border-top:2px solid var(--sky-blue);padding-top:10px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--steel);margin-bottom:4px;">Día del Padre</div>
+            <div style="font-size:13px;color:var(--navy);line-height:1.45;">Las <strong>manos que enseñaron</strong>. Autonomía, movimiento, día activo.</div>
           </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);margin-bottom:6px;">Sonido</div>
-            <div style="font-size:14px;">Diseño sonoro orgánico (sin VO épica). Música original o licencia premium.</div>
+          <div style="border-top:2px solid var(--deep-blue);padding-top:10px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--steel);margin-bottom:4px;">Día de la Madre</div>
+            <div style="font-size:13px;color:var(--navy);line-height:1.45;">Las <strong>manos que sostienen</strong>. Identidad intacta, joya útil.</div>
           </div>
+        </div>
+
+        <div style="margin-top:22px;padding:14px 18px;background:var(--mist);border-radius:10px;">
+          <p style="font-size:13px;color:var(--navy);line-height:1.5;">Mismo símbolo, misma voz, misma promesa: <em>la tranquilidad de sentirse en buenas manos.</em> Lo único que cambia es el contexto temporal.</p>
         </div>
       </div>
 
       <div class="behance-card">
-        <!-- REEMPLAZAR PLACEHOLDER POR <img src="behance-marineda.jpg"> CUANDO EL ASSET ESTÉ DISPONIBLE -->
+        <!-- REEMPLAZAR PLACEHOLDER POR <img src="marineda-city.jpg"> CUANDO EL ASSET ESTÉ DISPONIBLE -->
         <div class="behance-card__hero">
           <span class="behance-card__placeholder-text">Placeholder · imagen Marineda City</span>
         </div>
         <div class="behance-card__body">
-          <div class="behance-card__label">Referencia visual</div>
+          <div class="behance-card__label">Caso de referencia</div>
           <div class="behance-card__title">Marineda City</div>
-          <div class="behance-card__desc">Campaña visual y arquitectónica. Tono premium, humano, narrativa de marca con énfasis en lo cotidiano. La línea estética que queremos para ViveWatch.</div>
+          <div class="behance-card__desc">Una marca que se moduló por temporadas y públicos manteniendo un mismo lenguaje propio. Mismo principio que aplicamos a ViveLibre.</div>
           <a class="behance-btn" href="https://www.behance.net/gallery/189594175/Marineda-City" target="_blank" rel="noopener">
             Ver proyecto en Behance <span class="behance-btn__arrow">↗</span>
           </a>
@@ -2233,7 +2235,7 @@ h3 {
               · B-roll temáticos invierno + familia
             </td>
             <td>
-              · 4× Continuidad (15 piezas c/u = 60)<br>
+              · Continuidad (15 piezas)<br>
               · Navidad: reel + posts + stories + adaptaciones (15)<br>
               · 1 cuña radio Navidad<br>
               · Banners GIF estacionales<br>
@@ -2352,7 +2354,7 @@ h3 {
           <div class="budget-block__pct">25%</div>
           <div class="budget-block__body">
             <div class="budget-block__title">Hito B · Continuidad + Navidad</div>
-            <div class="budget-block__desc">Rodaje continuidad + Navidad + 4× Continuidad por iteración IA + cuña radio.</div>
+            <div class="budget-block__desc">Rodaje continuidad + Navidad + iteración IA para piezas digitales + cuña radio.</div>
             <div class="budget-block__when">Al rodar · septiembre 2026</div>
           </div>
         </div>
