@@ -1177,26 +1177,20 @@ h3 {
   font-weight: 700;
 }
 
-/* Clients grid placeholder */
-.clients-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-top: 40px;
+/* Clients hero image */
+.clients-hero {
+  margin: 24px auto 0;
+  max-width: 1180px;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(29,47,73,0.18);
 }
 
-.client-cell {
-  aspect-ratio: 16 / 9;
-  background: var(--mist);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--steel);
+.clients-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* Tone attributes (4 col) */
@@ -1389,18 +1383,9 @@ h3 {
     <p class="eyebrow">TRUSTED BY</p>
     <h1 style="max-width:920px;">Equipos que confían en <span class="gradient-text">Samsa</span> para lanzar, escalar y comunicar.</h1>
 
-    <div class="clients-grid">
-      <div class="client-cell">Cliente 01</div>
-      <div class="client-cell">Cliente 02</div>
-      <div class="client-cell">Cliente 03</div>
-      <div class="client-cell">Cliente 04</div>
-      <div class="client-cell">Cliente 05</div>
-      <div class="client-cell">Cliente 06</div>
-      <div class="client-cell">Cliente 07</div>
-      <div class="client-cell">Cliente 08</div>
+    <div class="clients-hero">
+      <img src="logos-clientes.jpg" alt="Clientes Samsa: Heinz, McDonald's, Coca-Cola, Natura, Yoplait, Glovo, Chevrolet, RE/MAX, Forbes, Inditex, Ocean Bank, Visa, Schneider Electric, MSD, GSK, Sanofi, Johnson & Johnson, Puma, Nike, El Corte Inglés, SoundCloud, Adobe, Whirlpool" loading="lazy">
     </div>
-
-    <p class="subtitle" style="margin-top:32px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;">Reemplazar con grilla final de logos · placeholder editable</p>
   </div>
 
   <div class="slide__footer">
