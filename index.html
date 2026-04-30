@@ -152,20 +152,20 @@ html, body {
 .slide--dark .eyebrow { color: var(--fog); opacity: 1; }
 
 h1 {
-  font-size: clamp(42px, 5vw, 72px);
+  font-size: clamp(34px, 3.8vw, 58px);
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: clamp(32px, 3.5vw, 56px);
+  font-size: clamp(28px, 3vw, 48px);
   font-weight: 700;
   line-height: 1.1;
 }
 
 h3 {
-  font-size: clamp(22px, 2vw, 30px);
+  font-size: clamp(20px, 1.8vw, 28px);
   font-weight: 600;
   line-height: 1.2;
 }
@@ -206,7 +206,7 @@ h3 {
    SECTION DIVIDER
    ============================================ */
 .section-title {
-  font-size: clamp(72px, 10vw, 140px);
+  font-size: clamp(54px, 7.5vw, 108px);
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -332,7 +332,7 @@ h3 {
 }
 
 .stat__value {
-  font-size: clamp(36px, 4vw, 56px);
+  font-size: clamp(30px, 3.4vw, 48px);
   font-weight: 800;
   line-height: 1.1;
 }
@@ -633,7 +633,7 @@ h3 {
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 420px;
+  min-height: clamp(300px, 42vh, 420px);
   border: 1px solid var(--mist);
 }
 
@@ -730,9 +730,9 @@ h3 {
   display: grid;
   grid-template-columns: 1.45fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 16px;
-  margin-top: 28px;
-  height: clamp(360px, 56vh, 480px);
+  gap: 14px;
+  margin-top: 24px;
+  height: clamp(280px, 48vh, 420px);
 }
 
 .video-tile {
@@ -854,12 +854,12 @@ h3 {
 
 .web-grid--3 {
   grid-template-columns: repeat(3, 1fr);
-  height: 220px;
+  height: clamp(150px, 22vh, 200px);
 }
 
 .web-grid--2 {
   grid-template-columns: repeat(2, 1fr);
-  height: 240px;
+  height: clamp(170px, 24vh, 220px);
 }
 
 .web-grid .video-tile {
@@ -915,7 +915,7 @@ h3 {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  min-height: 360px;
+  min-height: clamp(260px, 38vh, 360px);
   background: var(--fog-navy);
 }
 
@@ -1344,21 +1344,41 @@ h3 {
 /* ============================================
    RESPONSIVE
    ============================================ */
+/* Laptop screens — typical 13"/14" MacBooks */
+@media (max-width: 1500px) {
+  :root {
+    --pad-x: 80px;
+    --pad-top: 56px;
+    --pad-bottom: 44px;
+  }
+  .slide__content--top { padding-top: 44px; }
+  .slide__footer { padding: 0 var(--pad-x) 18px; }
+}
+
+@media (max-height: 900px) {
+  :root {
+    --pad-top: 48px;
+    --pad-bottom: 40px;
+  }
+  .slide__content--top { padding-top: 38px; }
+  .slide__footer { padding: 0 var(--pad-x) 16px; }
+}
+
 @media (max-width: 1200px) {
   :root {
     --pad-x: 60px;
-    --pad-top: 60px;
-    --pad-bottom: 50px;
+    --pad-top: 50px;
+    --pad-bottom: 40px;
   }
 }
 
 @media (max-width: 768px) {
   :root {
     --pad-x: 32px;
-    --pad-top: 40px;
-    --pad-bottom: 32px;
+    --pad-top: 36px;
+    --pad-bottom: 28px;
   }
-  .grid-2, .grid-3, .grid-4, .index-grid, .moodboard, .phases, .clients-grid, .tone-grid {
+  .grid-2, .grid-3, .grid-4, .index-grid, .moodboard, .phases, .tone-grid, .timeline-year__grid, .web-grid--3, .web-grid--2, .hito-layout {
     grid-template-columns: 1fr;
   }
 }
@@ -1386,7 +1406,7 @@ h3 {
 
     <div style="margin-top:auto;margin-bottom:60px;">
       <p class="eyebrow" style="color:var(--fog);">PROPUESTA · LANZAMIENTO · SEPTIEMBRE 2026</p>
-      <h1 style="font-size:clamp(56px,8vw,108px);letter-spacing:-0.03em;line-height:1;">
+      <h1 style="font-size:clamp(46px,6.2vw,90px);letter-spacing:-0.03em;line-height:1;">
         Lanzamiento<br>
         <span class="gradient-text">ViveWatch.</span>
       </h1>
@@ -1678,7 +1698,7 @@ h3 {
     <p class="eyebrow" style="color:var(--fog);">CONCEPTO PARAGUAS</p>
 
     <div style="margin-top:24px;">
-      <h1 style="font-size:clamp(64px,9.5vw,140px);font-weight:800;letter-spacing:-0.03em;line-height:0.95;">
+      <h1 style="font-size:clamp(52px,7vw,108px);font-weight:800;letter-spacing:-0.03em;line-height:0.95;">
         En buenas<br>
         <span class="gradient-text">manos.</span>
       </h1>
@@ -2487,7 +2507,7 @@ h3 {
     <div class="grid-2" style="margin-top:40px;gap:60px;align-items:flex-start;">
       <div>
         <p class="subtitle" style="font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);">Total de campaña</p>
-        <h1 style="font-size:clamp(72px,9vw,140px);margin-top:10px;line-height:1;">
+        <h1 style="font-size:clamp(54px,6.5vw,108px);margin-top:10px;line-height:1;">
           <span class="gradient-text">€ XX.XXX</span>
         </h1>
         <p class="body" style="margin-top:20px;font-size:15px;">Concepto + producción de las dos jornadas de rodaje + iteración con IA generativa para los 7 hitos del año + post-producción y entregas.</p>
@@ -2578,7 +2598,7 @@ h3 {
 
     <div style="margin-top:auto;margin-bottom:40px;">
       <p class="eyebrow" style="color:var(--fog);">LA TRANQUILIDAD DE SENTIRSE</p>
-      <h1 style="font-size:clamp(72px,11vw,160px);font-weight:800;letter-spacing:-0.03em;line-height:0.95;">
+      <h1 style="font-size:clamp(60px,8.5vw,124px);font-weight:800;letter-spacing:-0.03em;line-height:0.95;">
         En buenas<br>
         <span class="gradient-text">manos.</span>
       </h1>
