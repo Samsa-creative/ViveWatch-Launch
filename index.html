@@ -823,6 +823,33 @@ h3 {
   max-width: calc(100% - 28px);
 }
 
+.video-tile__behance {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 8px 14px 8px 16px;
+  background: rgba(255,255,255,0.95);
+  color: var(--navy-deep);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  z-index: 4;
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, background 0.2s ease;
+  box-shadow: 0 6px 16px rgba(12,19,34,0.25);
+}
+
+.video-tile__behance:hover {
+  background: var(--paper);
+  transform: translateY(-1px);
+}
+
 /* ============================================
    WEB + TESTIMONIALES SECTION (slide 20)
    ============================================ */
@@ -2015,6 +2042,7 @@ h3 {
       <div class="video-tile" data-yt-id="KKLdqmnGvc8" data-yt-title="Theia · Campaña healthtech">
         <img class="video-tile__thumb" src="https://i.ytimg.com/vi/KKLdqmnGvc8/maxresdefault.jpg" alt="Theia · Campaña healthtech" loading="lazy">
         <div class="video-tile__playbtn"></div>
+        <a class="video-tile__behance" href="https://www.behance.net/gallery/164865611/THEIA-Witness-Change" target="_blank" rel="noopener">Ver en Behance ↗</a>
         <span class="video-tile__caption">Theia</span>
       </div>
 
@@ -2025,7 +2053,6 @@ h3 {
       </div>
     </div>
 
-    <p class="subtitle" style="margin-top:18px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);">Click en cualquier video para reproducir · embeds editables (atributo data-yt-id)</p>
   </div>
 
   <div class="slide__footer">
@@ -2734,6 +2761,7 @@ h3 {
   // Lite YouTube · load iframe on click
   document.querySelectorAll('.video-tile[data-yt-id]').forEach(function(tile) {
     tile.addEventListener('click', function(ev) {
+      if (ev.target.closest('a')) return;
       ev.stopPropagation();
       if (tile.querySelector('iframe')) return;
       const id = tile.dataset.ytId;
