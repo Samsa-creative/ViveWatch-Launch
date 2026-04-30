@@ -735,6 +735,13 @@ h3 {
   height: clamp(280px, 48vh, 420px);
 }
 
+.video-mosaic--duo {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 18px;
+  height: clamp(320px, 54vh, 460px);
+}
+
 .video-tile {
   position: relative;
   border-radius: 14px;
@@ -2002,30 +2009,20 @@ h3 {
   <div class="blob" style="width:380px;height:180px;bottom:-40px;left:-40px;opacity:0.1;"></div>
 
   <div class="slide__content slide__content--top">
-    <p class="eyebrow">INSPIRACIÓN AUDIOVISUAL</p>
-    <h1>Tres referencias que marcan el norte.</h1>
+    <p class="eyebrow">CASOS DE INDUSTRIA</p>
+    <h1>Casos de campañas <span class="gradient-text">industria healthtech</span>.</h1>
 
-    <div class="video-mosaic">
-      <!-- TILE HERO (grande, izquierda), referencia principal -->
-      <!-- Para reemplazar el video: cambiar data-yt-id y los datos visibles -->
-      <div class="video-tile video-tile--hero" data-yt-id="M7FIvfx5J10" data-yt-title="Volvo · Epic Split">
-        <img class="video-tile__thumb" src="https://i.ytimg.com/vi/M7FIvfx5J10/maxresdefault.jpg" alt="Volvo · Epic Split" loading="lazy">
+    <div class="video-mosaic video-mosaic--duo">
+      <div class="video-tile" data-yt-id="KKLdqmnGvc8" data-yt-title="Theia · Campaña healthtech">
+        <img class="video-tile__thumb" src="https://i.ytimg.com/vi/KKLdqmnGvc8/maxresdefault.jpg" alt="Theia · Campaña healthtech" loading="lazy">
         <div class="video-tile__playbtn"></div>
-        <span class="video-tile__caption">Volvo · Premium · silencio · seguridad sin alarma</span>
+        <span class="video-tile__caption">Theia</span>
       </div>
 
-      <!-- TILE TOP-RIGHT · referencia humana -->
-      <div class="video-tile" data-yt-id="IZ-3JJQpCQI" data-yt-title="Apple Holiday · Misunderstood">
-        <img class="video-tile__thumb" src="https://i.ytimg.com/vi/IZ-3JJQpCQI/maxresdefault.jpg" alt="Apple Holiday · Misunderstood" loading="lazy">
+      <div class="video-tile" data-yt-id="dXNwQO_oPnA" data-yt-title="Illumina · Campaña healthtech">
+        <img class="video-tile__thumb" src="https://i.ytimg.com/vi/dXNwQO_oPnA/maxresdefault.jpg" alt="Illumina · Campaña healthtech" loading="lazy">
         <div class="video-tile__playbtn"></div>
-        <span class="video-tile__caption">Apple Holiday · Intimidad familiar</span>
-      </div>
-
-      <!-- TILE BOTTOM-RIGHT · referencia cinematográfica -->
-      <div class="video-tile" data-yt-id="lxmq-e2sJsI" data-yt-title="Apple · Welcome Home">
-        <img class="video-tile__thumb" src="https://i.ytimg.com/vi/lxmq-e2sJsI/maxresdefault.jpg" alt="Apple · Welcome Home" loading="lazy">
-        <div class="video-tile__playbtn"></div>
-        <span class="video-tile__caption">Apple · Lenguaje cinematográfico</span>
+        <span class="video-tile__caption">Illumina</span>
       </div>
     </div>
 
